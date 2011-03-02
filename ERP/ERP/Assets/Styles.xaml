@@ -12,6 +12,7 @@
         <ResourceDictionary Source="../Controls/BusyIndicator.xaml" />
         <ResourceDictionary Source="Brushes.xaml"/>
         <ResourceDictionary Source="Fonts.xaml"/>
+        <ResourceDictionary Source="CustomStyles.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
     <!-- ******MAIN PAGE STYLES****** -->

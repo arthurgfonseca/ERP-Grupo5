@@ -276,3 +276,4 @@ C:\Projects\danilo.yokoyama\ERP\ERP\Bin\Debug\System.Windows.Controls.DomainServ
 C:\Projects\danilo.yokoyama\ERP\ERP\Bin\Debug\System.Windows.Controls.DomainServices.xml
 C:\Projects\danilo.yokoyama\ERP\ERP\obj\Debug\TestCRUDPlanosSaude.g.i.cs
 C:\Projects\danilo.yokoyama\ERP\ERP\obj\Debug\TestCRUDServicoMedico.g.i.cs
+C:\Projects\danilo.yokoyama\ERP\ERP\obj\Debug\CadastrarPlanoSaude.g.i.cs

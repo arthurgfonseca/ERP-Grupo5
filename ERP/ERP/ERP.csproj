@@ -102,6 +102,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ErrorResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="CadastrarPlanoSaude.xaml.cs">
+      <DependentUpon>CadastrarPlanoSaude.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Models\LoginInfo.cs" />
     <Compile Include="Models\UserExtensions.cs" />
@@ -165,6 +168,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Assets\CustomStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Assets\Fonts.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -177,6 +184,10 @@
       <Generator>MSBuild:MarkupCompilePass1</Generator>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Page>
+    <Page Include="CadastrarPlanoSaude.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\BusyIndicator.xaml">
       <Generator>MSBuild:Compile</Generator>

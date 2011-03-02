@@ -62,7 +62,7 @@
         protected virtual void InitializeRootVisual()
         {
             this.busyIndicator = new BusyIndicator();
-            this.busyIndicator.Content = new TestCRUD();
+            this.busyIndicator.Content = new TestCRUDPlanosSaude();
             this.busyIndicator.HorizontalContentAlignment = HorizontalAlignment.Stretch;
             this.busyIndicator.VerticalContentAlignment = VerticalAlignment.Stretch;
 

@@ -1322,7 +1322,9 @@ namespace ErpAdministracaoModel
         
         private double _porcentagem_desconto;
         
-        private EntityCollection<ServicoMedicoSet> _servicoMedicoSet;
+        private EntityRef<ServicoMedicoSet> _servicoMedicoSet;
+        
+        private int _servicoMedicoSet_codigo;
         
         #region Extensibility Method Definitions
 
@@ -1337,6 +1339,8 @@ namespace ErpAdministracaoModel
         partial void OnidChanged();
         partial void Onporcentagem_descontoChanging(double value);
         partial void Onporcentagem_descontoChanged();
+        partial void OnServicoMedicoSet_codigoChanging(int value);
+        partial void OnServicoMedicoSet_codigoChanged();
 
         #endregion
         
@@ -1469,19 +1473,71 @@ namespace ErpAdministracaoModel
         }
         
         /// <summary>
-        /// Gets the collection of associated <see cref="ServicoMedicoSet"/> entities.
+        /// Gets or sets the associated <see cref="ServicoMedicoSet"/> entity.
         /// </summary>
-        [Association("ConvenioServicoSet_ServicoMedicoSet", "id", "ConvenioServico_id")]
+        [Association("ServicoMedicoSet_ConvenioServicoSet", "ServicoMedicoSet_codigo", "codigo", IsForeignKey=true)]
         [XmlIgnore()]
-        public EntityCollection<ServicoMedicoSet> ServicoMedicoSet
+        public ServicoMedicoSet ServicoMedicoSet
         {
             get
             {
                 if ((this._servicoMedicoSet == null))
                 {
-                    this._servicoMedicoSet = new EntityCollection<ServicoMedicoSet>(this, "ServicoMedicoSet", this.FilterServicoMedicoSet, this.AttachServicoMedicoSet, this.DetachServicoMedicoSet);
+                    this._servicoMedicoSet = new EntityRef<ServicoMedicoSet>(this, "ServicoMedicoSet", this.FilterServicoMedicoSet);
                 }
-                return this._servicoMedicoSet;
+                return this._servicoMedicoSet.Entity;
+            }
+            set
+            {
+                ServicoMedicoSet previous = this.ServicoMedicoSet;
+                if ((previous != value))
+                {
+                    this.ValidateProperty("ServicoMedicoSet", value);
+                    if ((previous != null))
+                    {
+                        this._servicoMedicoSet.Entity = null;
+                        previous.ConvenioServicoSet.Remove(this);
+                    }
+                    if ((value != null))
+                    {
+                        this.ServicoMedicoSet_codigo = value.codigo;
+                    }
+                    else
+                    {
+                        this.ServicoMedicoSet_codigo = default(int);
+                    }
+                    this._servicoMedicoSet.Entity = value;
+                    if ((value != null))
+                    {
+                        value.ConvenioServicoSet.Add(this);
+                    }
+                    this.RaisePropertyChanged("ServicoMedicoSet");
+                }
+            }
+        }
+        
+        /// <summary>
+        /// Gets or sets the 'ServicoMedicoSet_codigo' value.
+        /// </summary>
+        [DataMember()]
+        [RoundtripOriginal()]
+        public int ServicoMedicoSet_codigo
+        {
+            get
+            {
+                return this._servicoMedicoSet_codigo;
+            }
+            set
+            {
+                if ((this._servicoMedicoSet_codigo != value))
+                {
+                    this.OnServicoMedicoSet_codigoChanging(value);
+                    this.RaiseDataMemberChanging("ServicoMedicoSet_codigo");
+                    this.ValidateProperty("ServicoMedicoSet_codigo", value);
+                    this._servicoMedicoSet_codigo = value;
+                    this.RaiseDataMemberChanged("ServicoMedicoSet_codigo");
+                    this.OnServicoMedicoSet_codigoChanged();
+                }
             }
         }
         
@@ -1490,19 +1546,9 @@ namespace ErpAdministracaoModel
             return (entity.codigo == this.ConvenioPlanoSaude_codigo);
         }
         
-        private void AttachServicoMedicoSet(ServicoMedicoSet entity)
-        {
-            entity.ConvenioServicoSet = this;
-        }
-        
-        private void DetachServicoMedicoSet(ServicoMedicoSet entity)
-        {
-            entity.ConvenioServicoSet = null;
-        }
-        
         private bool FilterServicoMedicoSet(ServicoMedicoSet entity)
         {
-            return (entity.ConvenioServico_id == this.id);
+            return (entity.codigo == this.ServicoMedicoSet_codigo);
         }
         
         /// <summary>
@@ -1524,9 +1570,7 @@ namespace ErpAdministracaoModel
         
         private int _codigo;
         
-        private int _convenioServico_id;
-        
-        private EntityRef<ConvenioServicoSet> _convenioServicoSet;
+        private EntityCollection<ConvenioServicoSet> _convenioServicoSet;
         
         private string _descricao;
         
@@ -1543,8 +1587,6 @@ namespace ErpAdministracaoModel
         partial void OnCreated();
         partial void OncodigoChanging(int value);
         partial void OncodigoChanged();
-        partial void OnConvenioServico_idChanging(int value);
-        partial void OnConvenioServico_idChanged();
         partial void OndescricaoChanging(string value);
         partial void OndescricaoChanged();
         partial void OnnomeChanging(string value);
@@ -1590,71 +1632,19 @@ namespace ErpAdministracaoModel
         }
         
         /// <summary>
-        /// Gets or sets the 'ConvenioServico_id' value.
+        /// Gets the collection of associated <see cref="ConvenioServicoSet"/> entities.
         /// </summary>
-        [DataMember()]
-        [RoundtripOriginal()]
-        public int ConvenioServico_id
-        {
-            get
-            {
-                return this._convenioServico_id;
-            }
-            set
-            {
-                if ((this._convenioServico_id != value))
-                {
-                    this.OnConvenioServico_idChanging(value);
-                    this.RaiseDataMemberChanging("ConvenioServico_id");
-                    this.ValidateProperty("ConvenioServico_id", value);
-                    this._convenioServico_id = value;
-                    this.RaiseDataMemberChanged("ConvenioServico_id");
-                    this.OnConvenioServico_idChanged();
-                }
-            }
-        }
-        
-        /// <summary>
-        /// Gets or sets the associated <see cref="ConvenioServicoSet"/> entity.
-        /// </summary>
-        [Association("ConvenioServicoSet_ServicoMedicoSet", "ConvenioServico_id", "id", IsForeignKey=true)]
+        [Association("ServicoMedicoSet_ConvenioServicoSet", "codigo", "ServicoMedicoSet_codigo")]
         [XmlIgnore()]
-        public ConvenioServicoSet ConvenioServicoSet
+        public EntityCollection<ConvenioServicoSet> ConvenioServicoSet
         {
             get
             {
                 if ((this._convenioServicoSet == null))
                 {
-                    this._convenioServicoSet = new EntityRef<ConvenioServicoSet>(this, "ConvenioServicoSet", this.FilterConvenioServicoSet);
+                    this._convenioServicoSet = new EntityCollection<ConvenioServicoSet>(this, "ConvenioServicoSet", this.FilterConvenioServicoSet, this.AttachConvenioServicoSet, this.DetachConvenioServicoSet);
                 }
-                return this._convenioServicoSet.Entity;
-            }
-            set
-            {
-                ConvenioServicoSet previous = this.ConvenioServicoSet;
-                if ((previous != value))
-                {
-                    this.ValidateProperty("ConvenioServicoSet", value);
-                    if ((previous != null))
-                    {
-                        this._convenioServicoSet.Entity = null;
-                        previous.ServicoMedicoSet.Remove(this);
-                    }
-                    if ((value != null))
-                    {
-                        this.ConvenioServico_id = value.id;
-                    }
-                    else
-                    {
-                        this.ConvenioServico_id = default(int);
-                    }
-                    this._convenioServicoSet.Entity = value;
-                    if ((value != null))
-                    {
-                        value.ServicoMedicoSet.Add(this);
-                    }
-                    this.RaisePropertyChanged("ConvenioServicoSet");
-                }
+                return this._convenioServicoSet;
             }
         }
         
@@ -1732,9 +1722,19 @@ namespace ErpAdministracaoModel
             }
         }
         
+        private void AttachConvenioServicoSet(ConvenioServicoSet entity)
+        {
+            entity.ServicoMedicoSet = this;
+        }
+        
+        private void DetachConvenioServicoSet(ConvenioServicoSet entity)
+        {
+            entity.ServicoMedicoSet = null;
+        }
+        
         private bool FilterConvenioServicoSet(ConvenioServicoSet entity)
         {
-            return (entity.id == this.ConvenioServico_id);
+            return (entity.ServicoMedicoSet_codigo == this.codigo);
         }
         
         /// <summary>

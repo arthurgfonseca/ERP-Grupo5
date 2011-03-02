@@ -8,7 +8,7 @@
       <End Role="ConvenioPlanoSaudeSet" EntitySet="ConvenioPlanoSaudeSet" />
       <End Role="ConvenioServicoSet" EntitySet="ConvenioServicoSet" />
     </AssociationSet>
-    <AssociationSet Name="FK_ConvenioServicoServicoMedico" Association="erp_administracaoModel.FK_ConvenioServicoServicoMedico">
+    <AssociationSet Name="ConvenioServicoSetServicoMedicoSet" Association="erp_administracaoModel.ConvenioServicoSetServicoMedicoSet">
       <End Role="ConvenioServicoSet" EntitySet="ConvenioServicoSet" />
       <End Role="ServicoMedicoSet" EntitySet="ServicoMedicoSet" />
     </AssociationSet>
@@ -32,7 +32,8 @@
     <Property Name="porcentagem_desconto" Type="Double" Nullable="false" />
     <Property Name="ConvenioPlanoSaude_codigo" Type="Int32" Nullable="false" />
     <NavigationProperty Name="ConvenioPlanoSaudeSet" Relationship="erp_administracaoModel.FK_ConvenioServicoConvenioPlanoSaude" FromRole="ConvenioServicoSet" ToRole="ConvenioPlanoSaudeSet" />
-    <NavigationProperty Name="ServicoMedicoSet" Relationship="erp_administracaoModel.FK_ConvenioServicoServicoMedico" FromRole="ConvenioServicoSet" ToRole="ServicoMedicoSet" />
+    <NavigationProperty Name="ServicoMedicoSet" Relationship="erp_administracaoModel.ConvenioServicoSetServicoMedicoSet" FromRole="ConvenioServicoSet" ToRole="ServicoMedicoSet" />
+    <Property Type="Int32" Name="ServicoMedicoSet_codigo" Nullable="false" />
   </EntityType>
   <EntityType Name="ServicoMedicoSet">
     <Key>
@@ -42,8 +43,7 @@
     <Property Name="nome" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="descricao" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="preco" Type="Double" Nullable="false" />
-    <Property Name="ConvenioServico_id" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="ConvenioServicoSet" Relationship="erp_administracaoModel.FK_ConvenioServicoServicoMedico" FromRole="ServicoMedicoSet" ToRole="ConvenioServicoSet" />
+    <NavigationProperty Name="ConvenioServicoSet" Relationship="erp_administracaoModel.ConvenioServicoSetServicoMedicoSet" FromRole="ServicoMedicoSet" ToRole="ConvenioServicoSet" />
   </EntityType>
   <Association Name="FK_ConvenioServicoConvenioPlanoSaude">
     <End Role="ConvenioPlanoSaudeSet" Type="erp_administracaoModel.ConvenioPlanoSaudeSet" Multiplicity="1" />
@@ -57,15 +57,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_ConvenioServicoServicoMedico">
-    <End Role="ConvenioServicoSet" Type="erp_administracaoModel.ConvenioServicoSet" Multiplicity="1" />
-    <End Role="ServicoMedicoSet" Type="erp_administracaoModel.ServicoMedicoSet" Multiplicity="*" />
+  <Association Name="ConvenioServicoSetServicoMedicoSet">
+    <End Type="erp_administracaoModel.ConvenioServicoSet" Role="ConvenioServicoSet" Multiplicity="*" />
+    <End Type="erp_administracaoModel.ServicoMedicoSet" Role="ServicoMedicoSet" Multiplicity="1" />
     <ReferentialConstraint>
-      <Principal Role="ConvenioServicoSet">
-        <PropertyRef Name="id" />
+      <Principal Role="ServicoMedicoSet">
+        <PropertyRef Name="codigo" />
       </Principal>
-      <Dependent Role="ServicoMedicoSet">
-        <PropertyRef Name="ConvenioServico_id" />
+      <Dependent Role="ConvenioServicoSet">
+        <PropertyRef Name="ServicoMedicoSet_codigo" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

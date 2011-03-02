@@ -19,7 +19,7 @@ using System.Runtime.Serialization;
 #region EDM Relationship Metadata
 
 [assembly: EdmRelationshipAttribute("erp_administracaoModel", "FK_ConvenioServicoConvenioPlanoSaude", "ConvenioPlanoSaudeSet", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ErpAdministracaoModel.ConvenioPlanoSaudeSet), "ConvenioServicoSet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ErpAdministracaoModel.ConvenioServicoSet), true)]
-[assembly: EdmRelationshipAttribute("erp_administracaoModel", "FK_ConvenioServicoServicoMedico", "ConvenioServicoSet", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ErpAdministracaoModel.ConvenioServicoSet), "ServicoMedicoSet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ErpAdministracaoModel.ServicoMedicoSet), true)]
+[assembly: EdmRelationshipAttribute("erp_administracaoModel", "ConvenioServicoSetServicoMedicoSet", "ConvenioServicoSet", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(ErpAdministracaoModel.ConvenioServicoSet), "ServicoMedicoSet", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(ErpAdministracaoModel.ServicoMedicoSet), true)]
 
 #endregion
 
@@ -354,12 +354,14 @@ namespace ErpAdministracaoModel
         /// <param name="id">Initial value of the id property.</param>
         /// <param name="porcentagem_desconto">Initial value of the porcentagem_desconto property.</param>
         /// <param name="convenioPlanoSaude_codigo">Initial value of the ConvenioPlanoSaude_codigo property.</param>
-        public static ConvenioServicoSet CreateConvenioServicoSet(global::System.Int32 id, global::System.Double porcentagem_desconto, global::System.Int32 convenioPlanoSaude_codigo)
+        /// <param name="servicoMedicoSet_codigo">Initial value of the ServicoMedicoSet_codigo property.</param>
+        public static ConvenioServicoSet CreateConvenioServicoSet(global::System.Int32 id, global::System.Double porcentagem_desconto, global::System.Int32 convenioPlanoSaude_codigo, global::System.Int32 servicoMedicoSet_codigo)
         {
             ConvenioServicoSet convenioServicoSet = new ConvenioServicoSet();
             convenioServicoSet.id = id;
             convenioServicoSet.porcentagem_desconto = porcentagem_desconto;
             convenioServicoSet.ConvenioPlanoSaude_codigo = convenioPlanoSaude_codigo;
+            convenioServicoSet.ServicoMedicoSet_codigo = servicoMedicoSet_codigo;
             return convenioServicoSet;
         }
 
@@ -440,6 +442,30 @@ namespace ErpAdministracaoModel
         private global::System.Int32 _ConvenioPlanoSaude_codigo;
         partial void OnConvenioPlanoSaude_codigoChanging(global::System.Int32 value);
         partial void OnConvenioPlanoSaude_codigoChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ServicoMedicoSet_codigo
+        {
+            get
+            {
+                return _ServicoMedicoSet_codigo;
+            }
+            set
+            {
+                OnServicoMedicoSet_codigoChanging(value);
+                ReportPropertyChanging("ServicoMedicoSet_codigo");
+                _ServicoMedicoSet_codigo = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ServicoMedicoSet_codigo");
+                OnServicoMedicoSet_codigoChanged();
+            }
+        }
+        private global::System.Int32 _ServicoMedicoSet_codigo;
+        partial void OnServicoMedicoSet_codigoChanging(global::System.Int32 value);
+        partial void OnServicoMedicoSet_codigoChanged();
 
         #endregion
     
@@ -489,18 +515,34 @@ namespace ErpAdministracaoModel
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("erp_administracaoModel", "FK_ConvenioServicoServicoMedico", "ServicoMedicoSet")]
-        public EntityCollection<ServicoMedicoSet> ServicoMedicoSet
+        [EdmRelationshipNavigationPropertyAttribute("erp_administracaoModel", "ConvenioServicoSetServicoMedicoSet", "ServicoMedicoSet")]
+        public ServicoMedicoSet ServicoMedicoSet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ServicoMedicoSet>("erp_administracaoModel.FK_ConvenioServicoServicoMedico", "ServicoMedicoSet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ServicoMedicoSet>("erp_administracaoModel.ConvenioServicoSetServicoMedicoSet", "ServicoMedicoSet").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ServicoMedicoSet>("erp_administracaoModel.ConvenioServicoSetServicoMedicoSet", "ServicoMedicoSet").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<ServicoMedicoSet> ServicoMedicoSetReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ServicoMedicoSet>("erp_administracaoModel.ConvenioServicoSetServicoMedicoSet", "ServicoMedicoSet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ServicoMedicoSet>("erp_administracaoModel.FK_ConvenioServicoServicoMedico", "ServicoMedicoSet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ServicoMedicoSet>("erp_administracaoModel.ConvenioServicoSetServicoMedicoSet", "ServicoMedicoSet", value);
                 }
             }
         }
@@ -525,15 +567,13 @@ namespace ErpAdministracaoModel
         /// <param name="nome">Initial value of the nome property.</param>
         /// <param name="descricao">Initial value of the descricao property.</param>
         /// <param name="preco">Initial value of the preco property.</param>
-        /// <param name="convenioServico_id">Initial value of the ConvenioServico_id property.</param>
-        public static ServicoMedicoSet CreateServicoMedicoSet(global::System.Int32 codigo, global::System.String nome, global::System.String descricao, global::System.Double preco, global::System.Int32 convenioServico_id)
+        public static ServicoMedicoSet CreateServicoMedicoSet(global::System.Int32 codigo, global::System.String nome, global::System.String descricao, global::System.Double preco)
         {
             ServicoMedicoSet servicoMedicoSet = new ServicoMedicoSet();
             servicoMedicoSet.codigo = codigo;
             servicoMedicoSet.nome = nome;
             servicoMedicoSet.descricao = descricao;
             servicoMedicoSet.preco = preco;
-            servicoMedicoSet.ConvenioServico_id = convenioServico_id;
             return servicoMedicoSet;
         }
 
@@ -638,30 +678,6 @@ namespace ErpAdministracaoModel
         private global::System.Double _preco;
         partial void OnprecoChanging(global::System.Double value);
         partial void OnprecoChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ConvenioServico_id
-        {
-            get
-            {
-                return _ConvenioServico_id;
-            }
-            set
-            {
-                OnConvenioServico_idChanging(value);
-                ReportPropertyChanging("ConvenioServico_id");
-                _ConvenioServico_id = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("ConvenioServico_id");
-                OnConvenioServico_idChanged();
-            }
-        }
-        private global::System.Int32 _ConvenioServico_id;
-        partial void OnConvenioServico_idChanging(global::System.Int32 value);
-        partial void OnConvenioServico_idChanged();
 
         #endregion
     
@@ -673,34 +689,18 @@ namespace ErpAdministracaoModel
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("erp_administracaoModel", "FK_ConvenioServicoServicoMedico", "ConvenioServicoSet")]
-        public ConvenioServicoSet ConvenioServicoSet
+        [EdmRelationshipNavigationPropertyAttribute("erp_administracaoModel", "ConvenioServicoSetServicoMedicoSet", "ConvenioServicoSet")]
+        public EntityCollection<ConvenioServicoSet> ConvenioServicoSet
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ConvenioServicoSet>("erp_administracaoModel.FK_ConvenioServicoServicoMedico", "ConvenioServicoSet").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ConvenioServicoSet>("erp_administracaoModel.FK_ConvenioServicoServicoMedico", "ConvenioServicoSet").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<ConvenioServicoSet> ConvenioServicoSetReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<ConvenioServicoSet>("erp_administracaoModel.FK_ConvenioServicoServicoMedico", "ConvenioServicoSet");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ConvenioServicoSet>("erp_administracaoModel.ConvenioServicoSetServicoMedicoSet", "ConvenioServicoSet");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<ConvenioServicoSet>("erp_administracaoModel.FK_ConvenioServicoServicoMedico", "ConvenioServicoSet", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ConvenioServicoSet>("erp_administracaoModel.ConvenioServicoSetServicoMedicoSet", "ConvenioServicoSet", value);
                 }
             }
         }

@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 02/23/2011 15:23:57
+-- Date Created: 03/02/2011 16:25:49
 -- Generated from EDMX file: C:\Projects\danilo.yokoyama\ERP\ErpAdministracaoModel\AdministracaoModel.edmx
 -- --------------------------------------------------
 
@@ -20,8 +20,8 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_ConvenioServicoConvenioPlanoSaude]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[ConvenioServicoSet] DROP CONSTRAINT [FK_ConvenioServicoConvenioPlanoSaude];
 GO
-IF OBJECT_ID(N'[dbo].[FK_ConvenioServicoServicoMedico]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[ServicoMedicoSet] DROP CONSTRAINT [FK_ConvenioServicoServicoMedico];
+IF OBJECT_ID(N'[dbo].[FK_ConvenioServicoSetServicoMedicoSet1]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ConvenioServicoSet] DROP CONSTRAINT [FK_ConvenioServicoSetServicoMedicoSet1];
 GO
 
 -- --------------------------------------------------
@@ -36,12 +36,6 @@ IF OBJECT_ID(N'[dbo].[ConvenioServicoSet]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[ServicoMedicoSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[ServicoMedicoSet];
-GO
-IF OBJECT_ID(N'[dbo].[SatisfacaoClienteSet]', 'U') IS NOT NULL
-    DROP TABLE [dbo].SatisfacaoClienteSet;
-GO
-IF OBJECT_ID(N'[dbo].[SatisfacaoFuncionarioSet]', 'U') IS NOT NULL
-    DROP TABLE [dbo].SatisfacaoFuncionarioSet;
 GO
 
 -- --------------------------------------------------
@@ -62,7 +56,8 @@ GO
 CREATE TABLE [dbo].[ConvenioServicoSet] (
     [id] int IDENTITY(1,1) NOT NULL,
     [porcentagem_desconto] float  NOT NULL,
-    [ConvenioPlanoSaude_codigo] int  NOT NULL
+    [ConvenioPlanoSaude_codigo] int  NOT NULL,
+    [ServicoMedicoSet_codigo] int  NOT NULL
 );
 GO
 
@@ -71,8 +66,7 @@ CREATE TABLE [dbo].[ServicoMedicoSet] (
     [codigo] int IDENTITY(1,1) NOT NULL,
     [nome] nvarchar(max)  NOT NULL,
     [descricao] nvarchar(max)  NOT NULL,
-    [preco] float  NOT NULL,
-    [ConvenioServico_id] int  NOT NULL
+    [preco] float  NOT NULL
 );
 GO
 
@@ -116,18 +110,18 @@ ON [dbo].[ConvenioServicoSet]
     ([ConvenioPlanoSaude_codigo]);
 GO
 
--- Creating foreign key on [ConvenioServico_id] in table 'ServicoMedicoSet'
-ALTER TABLE [dbo].[ServicoMedicoSet]
-ADD CONSTRAINT [FK_ConvenioServicoServicoMedico]
-    FOREIGN KEY ([ConvenioServico_id])
-    REFERENCES [dbo].[ConvenioServicoSet]
-        ([id])
+-- Creating foreign key on [ServicoMedicoSet_codigo] in table 'ConvenioServicoSet'
+ALTER TABLE [dbo].[ConvenioServicoSet]
+ADD CONSTRAINT [FK_ConvenioServicoSetServicoMedicoSet]
+    FOREIGN KEY ([ServicoMedicoSet_codigo])
+    REFERENCES [dbo].[ServicoMedicoSet]
+        ([codigo])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 
--- Creating non-clustered index for FOREIGN KEY 'FK_ConvenioServicoServicoMedico'
-CREATE INDEX [IX_FK_ConvenioServicoServicoMedico]
-ON [dbo].[ServicoMedicoSet]
-    ([ConvenioServico_id]);
+-- Creating non-clustered index for FOREIGN KEY 'FK_ConvenioServicoSetServicoMedicoSet'
+CREATE INDEX [IX_FK_ConvenioServicoSetServicoMedicoSet]
+ON [dbo].[ConvenioServicoSet]
+    ([ServicoMedicoSet_codigo]);
 GO
 
 -- --------------------------------------------------

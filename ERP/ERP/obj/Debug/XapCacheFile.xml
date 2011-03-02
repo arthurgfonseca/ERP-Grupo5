@@ -1,5 +1,5 @@
-﻿<xapCache source="C:\Projects\danilo.yokoyama\ERP\ERP\Bin\Debug\ERP.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="02/03/2011 14:58:26">
-  <file source="C:\Projects\danilo.yokoyama\ERP\ERP\obj\Debug\ERP.dll" archivePath="ERP.dll" lastWriteTime="02/03/2011 14:58:24" />
+﻿<xapCache source="C:\Projects\danilo.yokoyama\ERP\ERP\Bin\Debug\ERP.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="02/03/2011 16:42:09">
+  <file source="C:\Projects\danilo.yokoyama\ERP\ERP\obj\Debug\ERP.dll" archivePath="ERP.dll" lastWriteTime="02/03/2011 16:42:07" />
   <file source="C:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.ComponentModel.DataAnnotations.dll" archivePath="System.ComponentModel.DataAnnotations.dll" lastWriteTime="26/08/2010 01:17:48" />
   <file source="C:\Program Files\Microsoft SDKs\RIA Services\v1.0\Libraries\Silverlight\System.ServiceModel.DomainServices.Client.dll" archivePath="System.ServiceModel.DomainServices.Client.dll" lastWriteTime="06/05/2010 13:24:00" />
   <file source="C:\Program Files\Microsoft SDKs\RIA Services\v1.0\Libraries\Silverlight\System.ServiceModel.DomainServices.Client.Web.dll" archivePath="System.ServiceModel.DomainServices.Client.Web.dll" lastWriteTime="06/05/2010 13:23:58" />
@@ -12,5 +12,5 @@
   <file source="C:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Controls.Input.dll" archivePath="System.Windows.Controls.Input.dll" lastWriteTime="26/08/2010 01:17:48" />
   <file source="C:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Controls.Navigation.dll" archivePath="System.Windows.Controls.Navigation.dll" lastWriteTime="26/08/2010 01:17:48" />
   <file source="C:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Data.dll" archivePath="System.Windows.Data.dll" lastWriteTime="26/08/2010 01:17:48" />
-  <file source="C:\Projects\danilo.yokoyama\ERP\ERP\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="02/03/2011 14:53:56" />
+  <file source="C:\Projects\danilo.yokoyama\ERP\ERP\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="02/03/2011 16:42:08" />
 </xapCache>

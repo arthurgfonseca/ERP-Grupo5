@@ -274,4 +274,5 @@ C:\Projects\danilo.yokoyama\ERP\ERP\Bin\Debug\TestPage.html
 C:\Projects\danilo.yokoyama\ERP\ERP\obj\Debug\XapCacheFile.xml
 C:\Projects\danilo.yokoyama\ERP\ERP\Bin\Debug\System.Windows.Controls.DomainServices.dll
 C:\Projects\danilo.yokoyama\ERP\ERP\Bin\Debug\System.Windows.Controls.DomainServices.xml
-C:\Projects\danilo.yokoyama\ERP\ERP\obj\Debug\TestCRUD.g.i.cs
+C:\Projects\danilo.yokoyama\ERP\ERP\obj\Debug\TestCRUDPlanosSaude.g.i.cs
+C:\Projects\danilo.yokoyama\ERP\ERP\obj\Debug\TestCRUDServicoMedico.g.i.cs

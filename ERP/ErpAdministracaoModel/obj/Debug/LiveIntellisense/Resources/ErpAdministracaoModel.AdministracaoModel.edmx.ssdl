@@ -8,7 +8,7 @@
       <End Role="ConvenioPlanoSaudeSet" EntitySet="ConvenioPlanoSaudeSet" />
       <End Role="ConvenioServicoSet" EntitySet="ConvenioServicoSet" />
     </AssociationSet>
-    <AssociationSet Name="FK_ConvenioServicoServicoMedico" Association="erp_administracaoModel.Store.FK_ConvenioServicoServicoMedico">
+    <AssociationSet Name="ConvenioServicoSetServicoMedicoSet" Association="erp_administracaoModel.Store.ConvenioServicoSetServicoMedicoSet">
       <End Role="ConvenioServicoSet" EntitySet="ConvenioServicoSet" />
       <End Role="ServicoMedicoSet" EntitySet="ServicoMedicoSet" />
     </AssociationSet>
@@ -17,7 +17,7 @@
     <Key>
       <PropertyRef Name="codigo" />
     </Key>
-    <Property Name="codigo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="empresa" Type="nvarchar(max)" Nullable="false" />
     <Property Name="plano" Type="nvarchar(max)" Nullable="false" />
     <Property Name="telefone" Type="nvarchar(max)" Nullable="false" />
@@ -27,19 +27,19 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="porcentagem_desconto" Type="float" Nullable="false" />
     <Property Name="ConvenioPlanoSaude_codigo" Type="int" Nullable="false" />
+    <Property Name="ServicoMedicoSet_codigo" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ServicoMedicoSet">
     <Key>
       <PropertyRef Name="codigo" />
     </Key>
-    <Property Name="codigo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nome" Type="nvarchar(max)" Nullable="false" />
     <Property Name="descricao" Type="nvarchar(max)" Nullable="false" />
     <Property Name="preco" Type="float" Nullable="false" />
-    <Property Name="ConvenioServico_id" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_ConvenioServicoConvenioPlanoSaude">
     <End Role="ConvenioPlanoSaudeSet" Type="erp_administracaoModel.Store.ConvenioPlanoSaudeSet" Multiplicity="1" />
@@ -53,15 +53,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_ConvenioServicoServicoMedico">
-    <End Role="ConvenioServicoSet" Type="erp_administracaoModel.Store.ConvenioServicoSet" Multiplicity="1" />
-    <End Role="ServicoMedicoSet" Type="erp_administracaoModel.Store.ServicoMedicoSet" Multiplicity="*" />
+  <Association Name="ConvenioServicoSetServicoMedicoSet">
+    <End Role="ConvenioServicoSet" Type="erp_administracaoModel.Store.ConvenioServicoSet" Multiplicity="*" />
+    <End Role="ServicoMedicoSet" Type="erp_administracaoModel.Store.ServicoMedicoSet" Multiplicity="1" />
     <ReferentialConstraint>
-      <Principal Role="ConvenioServicoSet">
-        <PropertyRef Name="id" />
+      <Principal Role="ServicoMedicoSet">
+        <PropertyRef Name="codigo" />
       </Principal>
-      <Dependent Role="ServicoMedicoSet">
-        <PropertyRef Name="ConvenioServico_id" />
+      <Dependent Role="ConvenioServicoSet">
+        <PropertyRef Name="ServicoMedicoSet_codigo" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

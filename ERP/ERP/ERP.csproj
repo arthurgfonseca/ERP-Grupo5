@@ -120,8 +120,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SecurityQuestions.resx</DependentUpon>
     </Compile>
-    <Compile Include="TestCRUD.xaml.cs">
-      <DependentUpon>TestCRUD.xaml</DependentUpon>
+    <Compile Include="TestCRUDPlanosSaude.xaml.cs">
+      <DependentUpon>TestCRUDPlanosSaude.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TestCRUDServicoMedico.xaml.cs">
+      <DependentUpon>TestCRUDServicoMedico.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ErrorWindow.xaml.cs">
       <DependentUpon>ErrorWindow.xaml</DependentUpon>
@@ -179,7 +182,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="TestCRUD.xaml">
+    <Page Include="TestCRUDPlanosSaude.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TestCRUDServicoMedico.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

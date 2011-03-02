@@ -1,0 +1,6 @@
+C:\Projects\danilo.yokoyama\ERP\ErpAdministracaoModel\bin\Debug\ErpAdministracaoModel.dll.config
+C:\Projects\danilo.yokoyama\ERP\ErpAdministracaoModel\bin\Debug\ErpAdministracaoModel.dll
+C:\Projects\danilo.yokoyama\ERP\ErpAdministracaoModel\bin\Debug\ErpAdministracaoModel.pdb
+C:\Projects\danilo.yokoyama\ERP\ErpAdministracaoModel\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\danilo.yokoyama\ERP\ErpAdministracaoModel\obj\Debug\ErpAdministracaoModel.dll
+C:\Projects\danilo.yokoyama\ERP\ErpAdministracaoModel\obj\Debug\ErpAdministracaoModel.pdb

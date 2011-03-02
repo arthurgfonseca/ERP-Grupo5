@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP", "ERP\ERP.csproj", "{984986A4-5A48-46C6-A294-FB7F9E0F5544}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D3F51D3D-405E-4F52-9016-3DA4E66D3220} = {D3F51D3D-405E-4F52-9016-3DA4E66D3220}
+		{D3F51D3D-405E-4F52-9016-3DA4E66D3220} = {D3F51D3D-405E-4F52-9016-3DA4E66D3220}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ERP.Web", "ERP.Web\ERP.Web.csproj", "{D3F51D3D-405E-4F52-9016-3DA4E66D3220}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErpAdministracaoModel", "ErpAdministracaoModel\ErpAdministracaoModel.csproj", "{AB7E2EDE-0155-421E-82F0-A79E75D4871B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{984986A4-5A48-46C6-A294-FB7F9E0F5544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{984986A4-5A48-46C6-A294-FB7F9E0F5544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{984986A4-5A48-46C6-A294-FB7F9E0F5544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{984986A4-5A48-46C6-A294-FB7F9E0F5544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3F51D3D-405E-4F52-9016-3DA4E66D3220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3F51D3D-405E-4F52-9016-3DA4E66D3220}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3F51D3D-405E-4F52-9016-3DA4E66D3220}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3F51D3D-405E-4F52-9016-3DA4E66D3220}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB7E2EDE-0155-421E-82F0-A79E75D4871B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB7E2EDE-0155-421E-82F0-A79E75D4871B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB7E2EDE-0155-421E-82F0-A79E75D4871B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB7E2EDE-0155-421E-82F0-A79E75D4871B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

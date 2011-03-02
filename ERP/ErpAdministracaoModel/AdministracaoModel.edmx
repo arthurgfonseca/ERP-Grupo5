@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="erp_administracaoModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="erp_administracaoModelStoreContainer">
+          <EntitySet Name="ConvenioPlanoSaudeSet" EntityType="erp_administracaoModel.Store.ConvenioPlanoSaudeSet" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ConvenioServicoSet" EntityType="erp_administracaoModel.Store.ConvenioServicoSet" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ServicoMedicoSet" EntityType="erp_administracaoModel.Store.ServicoMedicoSet" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_ConvenioServicoConvenioPlanoSaude" Association="erp_administracaoModel.Store.FK_ConvenioServicoConvenioPlanoSaude">
+            <End Role="ConvenioPlanoSaudeSet" EntitySet="ConvenioPlanoSaudeSet" />
+            <End Role="ConvenioServicoSet" EntitySet="ConvenioServicoSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ConvenioServicoServicoMedico" Association="erp_administracaoModel.Store.FK_ConvenioServicoServicoMedico">
+            <End Role="ConvenioServicoSet" EntitySet="ConvenioServicoSet" />
+            <End Role="ServicoMedicoSet" EntitySet="ServicoMedicoSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ConvenioPlanoSaudeSet">
+          <Key>
+            <PropertyRef Name="codigo" />
+          </Key>
+          <Property Name="codigo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="empresa" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="plano" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="telefone" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="observacoes" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ConvenioServicoSet">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="porcentagem_desconto" Type="float" Nullable="false" />
+          <Property Name="ConvenioPlanoSaude_codigo" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ServicoMedicoSet">
+          <Key>
+            <PropertyRef Name="codigo" />
+          </Key>
+          <Property Name="codigo" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="descricao" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="preco" Type="float" Nullable="false" />
+          <Property Name="ConvenioServico_id" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ConvenioServicoConvenioPlanoSaude">
+          <End Role="ConvenioPlanoSaudeSet" Type="erp_administracaoModel.Store.ConvenioPlanoSaudeSet" Multiplicity="1" />
+          <End Role="ConvenioServicoSet" Type="erp_administracaoModel.Store.ConvenioServicoSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ConvenioPlanoSaudeSet">
+              <PropertyRef Name="codigo" />
+            </Principal>
+            <Dependent Role="ConvenioServicoSet">
+              <PropertyRef Name="ConvenioPlanoSaude_codigo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ConvenioServicoServicoMedico">
+          <End Role="ConvenioServicoSet" Type="erp_administracaoModel.Store.ConvenioServicoSet" Multiplicity="1" />
+          <End Role="ServicoMedicoSet" Type="erp_administracaoModel.Store.ServicoMedicoSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ConvenioServicoSet">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ServicoMedicoSet">
+              <PropertyRef Name="ConvenioServico_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="erp_administracaoModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="erp_administracaoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ConvenioPlanoSaudeSet" EntityType="erp_administracaoModel.ConvenioPlanoSaudeSet" />
+          <EntitySet Name="ConvenioServicoSet" EntityType="erp_administracaoModel.ConvenioServicoSet" />
+          <EntitySet Name="ServicoMedicoSet" EntityType="erp_administracaoModel.ServicoMedicoSet" />
+          <AssociationSet Name="FK_ConvenioServicoConvenioPlanoSaude" Association="erp_administracaoModel.FK_ConvenioServicoConvenioPlanoSaude">
+            <End Role="ConvenioPlanoSaudeSet" EntitySet="ConvenioPlanoSaudeSet" />
+            <End Role="ConvenioServicoSet" EntitySet="ConvenioServicoSet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ConvenioServicoServicoMedico" Association="erp_administracaoModel.FK_ConvenioServicoServicoMedico">
+            <End Role="ConvenioServicoSet" EntitySet="ConvenioServicoSet" />
+            <End Role="ServicoMedicoSet" EntitySet="ServicoMedicoSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ConvenioPlanoSaudeSet">
+          <Key>
+            <PropertyRef Name="codigo" />
+          </Key>
+          <Property Name="codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="empresa" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="plano" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="telefone" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="observacoes" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="ConvenioServicoSet" Relationship="erp_administracaoModel.FK_ConvenioServicoConvenioPlanoSaude" FromRole="ConvenioPlanoSaudeSet" ToRole="ConvenioServicoSet" />
+        </EntityType>
+        <EntityType Name="ConvenioServicoSet">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="porcentagem_desconto" Type="Double" Nullable="false" />
+          <Property Name="ConvenioPlanoSaude_codigo" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ConvenioPlanoSaudeSet" Relationship="erp_administracaoModel.FK_ConvenioServicoConvenioPlanoSaude" FromRole="ConvenioServicoSet" ToRole="ConvenioPlanoSaudeSet" />
+          <NavigationProperty Name="ServicoMedicoSet" Relationship="erp_administracaoModel.FK_ConvenioServicoServicoMedico" FromRole="ConvenioServicoSet" ToRole="ServicoMedicoSet" />
+        </EntityType>
+        <EntityType Name="ServicoMedicoSet">
+          <Key>
+            <PropertyRef Name="codigo" />
+          </Key>
+          <Property Name="codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="descricao" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="preco" Type="Double" Nullable="false" />
+          <Property Name="ConvenioServico_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ConvenioServicoSet" Relationship="erp_administracaoModel.FK_ConvenioServicoServicoMedico" FromRole="ServicoMedicoSet" ToRole="ConvenioServicoSet" />
+        </EntityType>
+        <Association Name="FK_ConvenioServicoConvenioPlanoSaude">
+          <End Role="ConvenioPlanoSaudeSet" Type="erp_administracaoModel.ConvenioPlanoSaudeSet" Multiplicity="1" />
+          <End Role="ConvenioServicoSet" Type="erp_administracaoModel.ConvenioServicoSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ConvenioPlanoSaudeSet">
+              <PropertyRef Name="codigo" />
+            </Principal>
+            <Dependent Role="ConvenioServicoSet">
+              <PropertyRef Name="ConvenioPlanoSaude_codigo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ConvenioServicoServicoMedico">
+          <End Role="ConvenioServicoSet" Type="erp_administracaoModel.ConvenioServicoSet" Multiplicity="1" />
+          <End Role="ServicoMedicoSet" Type="erp_administracaoModel.ServicoMedicoSet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ConvenioServicoSet">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="ServicoMedicoSet">
+              <PropertyRef Name="ConvenioServico_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping CdmEntityContainer="erp_administracaoEntities" StorageEntityContainer="erp_administracaoModelStoreContainer">
+          <EntitySetMapping Name="ConvenioPlanoSaudeSet"><EntityTypeMapping TypeName="erp_administracaoModel.ConvenioPlanoSaudeSet"><MappingFragment StoreEntitySet="ConvenioPlanoSaudeSet">
+            <ScalarProperty Name="codigo" ColumnName="codigo" />
+            <ScalarProperty Name="empresa" ColumnName="empresa" />
+            <ScalarProperty Name="plano" ColumnName="plano" />
+            <ScalarProperty Name="telefone" ColumnName="telefone" />
+            <ScalarProperty Name="observacoes" ColumnName="observacoes" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ConvenioServicoSet"><EntityTypeMapping TypeName="erp_administracaoModel.ConvenioServicoSet"><MappingFragment StoreEntitySet="ConvenioServicoSet">
+            <ScalarProperty Name="id" ColumnName="id" />
+            <ScalarProperty Name="porcentagem_desconto" ColumnName="porcentagem_desconto" />
+            <ScalarProperty Name="ConvenioPlanoSaude_codigo" ColumnName="ConvenioPlanoSaude_codigo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ServicoMedicoSet"><EntityTypeMapping TypeName="erp_administracaoModel.ServicoMedicoSet"><MappingFragment StoreEntitySet="ServicoMedicoSet">
+            <ScalarProperty Name="codigo" ColumnName="codigo" />
+            <ScalarProperty Name="nome" ColumnName="nome" />
+            <ScalarProperty Name="descricao" ColumnName="descricao" />
+            <ScalarProperty Name="preco" ColumnName="preco" />
+            <ScalarProperty Name="ConvenioServico_id" ColumnName="ConvenioServico_id" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="AdministracaoModel">
+        <EntityTypeShape EntityType="erp_administracaoModel.ConvenioPlanoSaudeSet" Width="1.5" PointX="0.75" PointY="0.875" Height="2.1725878906250005" IsExpanded="true" />
+        <EntityTypeShape EntityType="erp_administracaoModel.ConvenioServicoSet" Width="1.5" PointX="3" PointY="1" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="erp_administracaoModel.ServicoMedicoSet" Width="1.5" PointX="5.25" PointY="0.875" Height="2.1725878906249996" IsExpanded="true" />
+        <AssociationConnector Association="erp_administracaoModel.FK_ConvenioServicoConvenioPlanoSaude" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="1.9901432291666668" />
+          <ConnectorPoint PointX="3" PointY="1.9901432291666668" />
+        </AssociationConnector>
+        <AssociationConnector Association="erp_administracaoModel.FK_ConvenioServicoServicoMedico" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="1.9901432291666668" />
+          <ConnectorPoint PointX="5.25" PointY="1.9901432291666668" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

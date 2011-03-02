@@ -1,0 +1,2 @@
+C:\Projects\danilo.yokoyama\ERP\ERP.Web\ERP.Web.csproj,634340720360886985,AdministracaoService.cs,GlobalSuppressions.cs,Resources\ValidationErrorResources.Designer.cs,Resources\RegistrationDataResources.Designer.cs,Services\AuthenticationService.cs,Properties\AssemblyInfo.cs,Models\User.cs,Models\RegistrationData.cs,Services\UserRegistrationService.cs,Models\Shared\User.shared.cs,
+C:\Projects\danilo.yokoyama\ERP\ErpAdministracaoModel\ErpAdministracaoModel.csproj,634340785701394950,AdministracaoModel.Designer.cs,Properties\AssemblyInfo.cs,

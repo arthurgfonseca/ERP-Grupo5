@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="erp_qualidadeModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="erp_qualidadeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SatisfacaoClienteSets" EntityType="erp_qualidadeModel.SatisfacaoClienteSet" />
+    <EntitySet Name="SatisfacaoFuncionarioSets" EntityType="erp_qualidadeModel.SatisfacaoFuncionarioSet" />
+  </EntityContainer>
+  <EntityType Name="SatisfacaoClienteSet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="data_avaliacao" Type="DateTime" Nullable="false" />
+    <Property Name="tempo_espera" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="qualidade_atendimento" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="outra_opiniao" Type="Boolean" Nullable="false" />
+    <Property Name="nota_final" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="comentarios" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="SatisfacaoFuncionarioSet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome_funcionario" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="codigo_funcionario" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="data_avaliacao" Type="DateTime" Nullable="false" />
+    <Property Name="nota_ambiente_trabalho" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="nota_colegas_trabalho" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="nota_satisfacao_pessoal" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="nota_final" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="comentarios" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+</Schema>

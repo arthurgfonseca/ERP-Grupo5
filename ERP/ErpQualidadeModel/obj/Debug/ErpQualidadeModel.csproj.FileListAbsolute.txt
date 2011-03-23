@@ -1,6 +1,0 @@
-C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ErpQualidadeModel\bin\Debug\ErpQualidadeModel.dll.config
-C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ErpQualidadeModel\bin\Debug\ErpQualidadeModel.dll
-C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ErpQualidadeModel\bin\Debug\ErpQualidadeModel.pdb
-C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ErpQualidadeModel\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ErpQualidadeModel\obj\Debug\ErpQualidadeModel.dll
-C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ErpQualidadeModel\obj\Debug\ErpQualidadeModel.pdb

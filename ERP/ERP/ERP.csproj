@@ -105,6 +105,12 @@
     <Compile Include="CadastrarPlanoSaude.xaml.cs">
       <DependentUpon>CadastrarPlanoSaude.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CadastrarSatisfacaoCliente.xaml.cs">
+      <DependentUpon>CadastrarSatisfacaoCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CadastrarSatisfacaoFuncionario.xaml.cs">
+      <DependentUpon>CadastrarSatisfacaoFuncionario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Models\LoginInfo.cs" />
     <Compile Include="Models\UserExtensions.cs" />
@@ -189,6 +195,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="CadastrarSatisfacaoCliente.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CadastrarSatisfacaoFuncionario.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\BusyIndicator.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -269,6 +283,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\DataSources\ERP.Web.AdministracaoContext.datasource" />
+    <None Include="Properties\DataSources\ERP.Web.QualidadeContext.datasource" />
     <None Include="Properties\DataSources\ERP.Web.UserRegistrationContext.datasource" />
     <None Include="Properties\DataSources\ERPClinica.Web.AdministracaoContext.datasource" />
     <None Include="Properties\OutOfBrowserSettings.xml" />

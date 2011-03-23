@@ -5,9 +5,69 @@
            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
            mc:Ignorable="d"
            xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
-           d:DesignWidth="640" d:DesignHeight="480"
-           Title="CadastrarSatisfacaoCliente Page">
-    <Grid x:Name="LayoutRoot">
-
+           d:DesignWidth="640" d:DesignHeight="704"
+           Title="CadastrarSatisfacaoCliente Page" xmlns:riaControls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.DomainServices" xmlns:my="clr-namespace:ErpQualidadeModel" xmlns:my1="clr-namespace:ERP.Web" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot" Height="646">
+        <riaControls:DomainDataSource AutoLoad="True" d:DesignData="{d:DesignInstance my:SatisfacaoClienteSet, CreateList=true}" Height="0" LoadedData="satisfacaoClienteSetDomainDataSource_LoadedData" Name="satisfacaoClienteSetDomainDataSource" QueryName="GetSatisfacaoClienteSetsQuery" Width="0">
+            <riaControls:DomainDataSource.DomainContext>
+                <my1:QualidadeContext />
+            </riaControls:DomainDataSource.DomainContext>
+        </riaControls:DomainDataSource>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="200" HorizontalAlignment="Left" ItemsSource="{Binding ElementName=satisfacaoClienteSetDomainDataSource, Path=Data}" Name="satisfacaoClienteSetDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" VerticalAlignment="Top" Width="628">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn x:Name="comentariosColumn" Binding="{Binding Path=comentarios}" Header="Comentarios" Width="SizeToHeader" />
+                <sdk:DataGridTemplateColumn x:Name="data_avaliacaoColumn" Header="Data avaliacao" Width="SizeToHeader">
+                    <sdk:DataGridTemplateColumn.CellEditingTemplate>
+                        <DataTemplate>
+                            <sdk:DatePicker SelectedDate="{Binding Path=data_avaliacao, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellEditingTemplate>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=data_avaliacao, StringFormat=\{0:d\}}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn x:Name="idColumn" Binding="{Binding Path=id, Mode=OneWay}" Header="Id" IsReadOnly="True" Width="SizeToHeader" />
+                <sdk:DataGridTextColumn x:Name="nomeColumn" Binding="{Binding Path=nome}" Header="Nome" Width="SizeToHeader" />
+                <sdk:DataGridTextColumn x:Name="nota_finalColumn" Binding="{Binding Path=nota_final}" Header="Nota final" Width="SizeToHeader" />
+                <sdk:DataGridCheckBoxColumn x:Name="outra_opiniaoColumn" Binding="{Binding Path=outra_opiniao}" Header="Outra opiniao" Width="SizeToHeader" />
+                <sdk:DataGridTextColumn x:Name="qualidade_atendimentoColumn" Binding="{Binding Path=qualidade_atendimento}" Header="Qualidade atendimento" Width="SizeToHeader" />
+                <sdk:DataGridTextColumn x:Name="tempo_esperaColumn" Binding="{Binding Path=tempo_espera}" Header="Tempo espera" Width="SizeToHeader" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <Grid HorizontalAlignment="Left" Margin="41,225,0,0" Name="grid1" VerticalAlignment="Top" Width="267">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <sdk:Label Content="comentarios:" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="3" VerticalAlignment="Center" />
+            <TextBox Grid.Column="1" Grid.Row="0" Height="23" HorizontalAlignment="Left" Margin="3" Name="comentariosTextBox" Text="{Binding Path=comentarios, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true, TargetNullValue=''}" VerticalAlignment="Center" Width="120" />
+            <sdk:Label Content="data avaliacao:" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="3" VerticalAlignment="Center" />
+            <sdk:DatePicker Grid.Column="1" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="3" Name="data_avaliacaoDatePicker" SelectedDate="{Binding Path=data_avaliacao, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120" />
+            <sdk:Label Content="id:" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="3" VerticalAlignment="Center" />
+            <TextBox Grid.Column="1" Grid.Row="2" Height="23" HorizontalAlignment="Left" Margin="3" Name="idTextBox" Text="{Binding Path=id, Mode=OneWay}" VerticalAlignment="Center" Width="120" />
+            <sdk:Label Content="nome:" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left" Margin="3" VerticalAlignment="Center" />
+            <TextBox Grid.Column="1" Grid.Row="3" Height="23" HorizontalAlignment="Left" Margin="3" Name="nomeTextBox" Text="{Binding Path=nome, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true, TargetNullValue=''}" VerticalAlignment="Center" Width="120" />
+            <sdk:Label Content="nota final:" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left" Margin="3" VerticalAlignment="Center" />
+            <TextBox Grid.Column="1" Grid.Row="4" Height="23" HorizontalAlignment="Left" Margin="3" Name="nota_finalTextBox" Text="{Binding Path=nota_final, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120" />
+            <sdk:Label Content="outra opiniao:" Grid.Column="0" Grid.Row="5" HorizontalAlignment="Left" Margin="3" VerticalAlignment="Center" />
+            <CheckBox Content="" Grid.Column="1" Grid.Row="5" Height="16" HorizontalAlignment="Left" IsChecked="{Binding Path=outra_opiniao, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3" Name="outra_opiniaoCheckBox" VerticalAlignment="Center" />
+            <sdk:Label Content="qualidade atendimento:" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Left" Margin="3" VerticalAlignment="Center" />
+            <TextBox Grid.Column="1" Grid.Row="6" Height="23" HorizontalAlignment="Left" Margin="3" Name="qualidade_atendimentoTextBox" Text="{Binding Path=qualidade_atendimento, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120" />
+            <sdk:Label Content="tempo espera:" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Left" Margin="3" VerticalAlignment="Center" />
+            <TextBox Grid.Column="1" Grid.Row="7" Height="23" HorizontalAlignment="Left" Margin="3" Name="tempo_esperaTextBox" Text="{Binding Path=tempo_espera, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120" />
+        </Grid>
+        <Button Content="Button" Height="45" HorizontalAlignment="Left" Margin="279,570,0,0" Name="button1" VerticalAlignment="Top" Width="103" Click="btnInserir_Click" />
     </Grid>
 </navigation:Page>

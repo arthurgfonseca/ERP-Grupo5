@@ -1,0 +1,12 @@
+C:\Projects\danilo.yokoyama\ERP\ERPQualidadeModel\bin\Debug\ERPQualidadeModel.dll.config
+C:\Projects\danilo.yokoyama\ERP\ERPQualidadeModel\bin\Debug\ERPQualidadeModel.dll
+C:\Projects\danilo.yokoyama\ERP\ERPQualidadeModel\bin\Debug\ERPQualidadeModel.pdb
+C:\Projects\danilo.yokoyama\ERP\ERPQualidadeModel\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\danilo.yokoyama\ERP\ERPQualidadeModel\obj\Debug\ERPQualidadeModel.dll
+C:\Projects\danilo.yokoyama\ERP\ERPQualidadeModel\obj\Debug\ERPQualidadeModel.pdb
+C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERPQualidadeModel\bin\Debug\ERPQualidadeModel.dll.config
+C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERPQualidadeModel\bin\Debug\ERPQualidadeModel.dll
+C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERPQualidadeModel\bin\Debug\ERPQualidadeModel.pdb
+C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERPQualidadeModel\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERPQualidadeModel\obj\Debug\ERPQualidadeModel.dll
+C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERPQualidadeModel\obj\Debug\ERPQualidadeModel.pdb

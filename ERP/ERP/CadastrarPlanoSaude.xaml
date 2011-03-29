@@ -1,0 +1,65 @@
+﻿<navigation:Page x:Class="ERP.CadastrarPlanoSaude" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="640" d:DesignHeight="480"
+           Title="Página de Cadastro de Plano de Saúde" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:riaControls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.DomainServices" xmlns:my="clr-namespace:ERP.Web" xmlns:my1="clr-namespace:ErpAdministracaoModel" Height="1000" Width="640">
+    <Grid x:Name="LayoutRoot" Height="Auto">
+        <sdk:Label Height="30" HorizontalAlignment="Left" Margin="12,12,0,0" Name="label1" VerticalAlignment="Top" Width="500" Content="Cadastro de Plano de Saúde" FontSize="20" FontWeight="Bold" />
+        <riaControls:DomainDataSource AutoLoad="True" d:DesignData="{d:DesignInstance my1:ConvenioPlanoSaudeSet, CreateList=true}" Height="0" LoadedData="convenioPlanoSaudeSetDomainDataSource_LoadedData" Name="convenioPlanoSaudeSetDomainDataSource" QueryName="GetConvenioPlanoSaudeSetQuery" Width="0">
+            <riaControls:DomainDataSource.DomainContext>
+                <my:AdministracaoContext />
+            </riaControls:DomainDataSource.DomainContext>
+        </riaControls:DomainDataSource>
+        <Border BorderBrush="Silver" BorderThickness="1" Height="2" HorizontalAlignment="Left" Margin="12,48,0,0" Name="border1" VerticalAlignment="Top" Width="500" Background="Silver" OpacityMask="Silver" />
+        <sdk:Label Height="20" HorizontalAlignment="Left" Margin="12,65,0,0" Name="label2" VerticalAlignment="Top" Width="500" FontSize="11" Content="Insira abaixo os dados do plano de saúde:" />
+        <Grid HorizontalAlignment="Left" Margin="12,91,0,0" Name="grid1" VerticalAlignment="Top" Width="500">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="394" />
+                <ColumnDefinition Width="120*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <sdk:Label Content="Empresa:" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Margin="3" VerticalAlignment="Center" />
+            <TextBox Grid.Column="2" Height="23" Margin="0,3,6,3" Name="empresaTextBox" Text="{Binding Path=empresa, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true, TargetNullValue=''}" VerticalAlignment="Center" />
+            <sdk:Label Content="Tipo do Plano:" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="3" VerticalAlignment="Center" />
+            <TextBox Grid.Column="2" Grid.Row="1" Height="23" Margin="0,3,6,3" Name="planoTextBox" Text="{Binding Path=plano, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true, TargetNullValue=''}" VerticalAlignment="Center" />
+            <sdk:Label Content="Telefone:" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="3" VerticalAlignment="Center" />
+            <TextBox Grid.Column="2" Grid.Row="2" Height="23" HorizontalAlignment="Left" Margin="0,3" Name="telefoneTextBox" Text="{Binding Path=telefone, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true, TargetNullValue=''}" VerticalAlignment="Center" Width="388" />
+            <sdk:Label Content="Observações:" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left" Margin="3" VerticalAlignment="Center" />
+            <TextBox Grid.Column="2" Grid.Row="3" Height="23" Margin="0,3,6,3" Name="observacoesTextBox" Text="{Binding Path=observacoes, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true, TargetNullValue=''}" VerticalAlignment="Center" />
+            <sdk:Label Grid.Column="1" Height="17" HorizontalAlignment="Center" Margin="0,7,0,0" Name="label3" VerticalAlignment="Top" Width="12" Content="*" Foreground="Red" />
+            <sdk:Label Content="*" Foreground="Red" Height="17" HorizontalAlignment="Center" Margin="4,8,4,0" Name="label4" VerticalAlignment="Top" Width="12" Grid.Column="1" Grid.Row="1" />
+            <sdk:Label Content="*" Foreground="Red" Height="17" HorizontalAlignment="Center" Margin="4,8,4,0" Name="label5" VerticalAlignment="Top" Width="12" Grid.Column="1" Grid.Row="2" />
+        </Grid>
+        <riaControls:DomainDataSource AutoLoad="True" d:DesignData="{d:DesignInstance my1:ServicoMedicoSet, CreateList=true}" Height="0" LoadedData="servicoMedicoSetDomainDataSource_LoadedData" Name="servicoMedicoSetDomainDataSource" QueryName="GetServicoMedicoSetQuery" Width="0">
+            <riaControls:DomainDataSource.DomainContext>
+                <my:AdministracaoContext />
+            </riaControls:DomainDataSource.DomainContext>
+        </riaControls:DomainDataSource>
+        <TextBlock Height="40" HorizontalAlignment="Left" Margin="15,236,0,0" Name="textBlock1" Text="Informe abaixo os descontos que o plano de saúde fornece para cada um dos serviços médicos prestados pela clínica:" VerticalAlignment="Top" Width="500" TextWrapping="Wrap" />
+        <riaControls:DomainDataSource AutoLoad="True" d:DesignData="{d:DesignInstance my1:ConvenioServicoSet, CreateList=true}" Height="0" LoadedData="convenioServicoSetDomainDataSource_LoadedData" Name="convenioServicoSetDomainDataSource" QueryName="GetConvenioServicoSetQuery" Width="0">
+            <riaControls:DomainDataSource.DomainContext>
+                <my:AdministracaoContext />
+            </riaControls:DomainDataSource.DomainContext>
+        </riaControls:DomainDataSource>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="Auto" HorizontalAlignment="Left" Margin="15,282,0,0" Name="grdServicos" RowDetailsVisibilityMode="VisibleWhenSelected" VerticalAlignment="Top" Width="Auto" MaxWidth="600" MaxHeight="350" Style="{StaticResource DataGridStyle}">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn x:Name="descricaoColumn" Binding="{Binding Path=descricao}" Header="Serviço Médico" Width="SizeToHeader" />
+                <sdk:DataGridTextColumn x:Name="precoColumn" Binding="{Binding Path=preco}" Header="Preço do Serviço" Width="SizeToHeader" />
+                <sdk:DataGridTextColumn x:Name="descontoColumn" Binding="{Binding Path=desconto, Mode=OneWay}" Header="Desconto" IsReadOnly="True" Width="SizeToHeader" />
+                <sdk:DataGridTextColumn x:Name="precoDescontoColumn" Binding="{Binding Path=precoDesconto}" Header="Preço com Desconto" Width="SizeToHeader" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+    </Grid>
+</navigation:Page>

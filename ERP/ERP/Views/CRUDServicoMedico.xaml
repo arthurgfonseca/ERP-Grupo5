@@ -1,0 +1,70 @@
+﻿<navigation:Page x:Class="ERP.CRUDServicoMedico" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:riaControls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.DomainServices"
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:dataForm="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.DataForm.Toolkit"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="640" d:DesignHeight="480"
+           Title="CRUDServicoMedico Page" xmlns:my="clr-namespace:ERP.Web" xmlns:my1="clr-namespace:ErpAdministracaoModel">
+    <Grid x:Name="LayoutRoot">
+        <riaControls:DomainDataSource AutoLoad="True" d:DesignData="{d:DesignInstance my1:ServicoMedicoSet, CreateList=true}" Height="0" LoadedData="servicoMedicoSetDomainDataSource_LoadedData" Name="servicoMedicoSetDomainDataSource" QueryName="GetServicoMedicoSetQuery" Width="0" PageSize="20" >
+            <riaControls:DomainDataSource.DomainContext>
+                <my:AdministracaoContext />
+            </riaControls:DomainDataSource.DomainContext>
+        </riaControls:DomainDataSource>
+        <StackPanel Margin="25,12,25,12">
+            <sdk:Label Height="40" HorizontalAlignment="Left" Name="lblTitulo" VerticalAlignment="Top" Width="500" FontSize="25" FontWeight="Bold" Content="CRUD de Serviço Médico" />
+            
+            <sdk:DataGrid Name="servicoMedicoSetDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" Margin="0,12,0,0" MinHeight="100"
+                          SelectedIndex="0" AutoGenerateColumns="False" IsReadOnly="True"
+                          ItemsSource="{Binding ElementName=servicoMedicoSetDomainDataSource, Path=Data}" >
+                <sdk:DataGrid.Columns>
+                    <sdk:DataGridTextColumn x:Name="codigoColumn" Binding="{Binding Path=codigo, Mode=OneWay}" Header="Codigo" IsReadOnly="True" Width="Auto" />
+                    <sdk:DataGridTextColumn x:Name="descricaoColumn" Binding="{Binding Path=descricao}" Header="Descricao" Width="Auto" />
+                    <sdk:DataGridTextColumn x:Name="nomeColumn" Binding="{Binding Path=nome}" Header="Nome" Width="Auto" />
+                    <sdk:DataGridTextColumn x:Name="precoColumn" Binding="{Binding Path=preco}" Header="Preco" Width="Auto" />
+                </sdk:DataGrid.Columns>
+            </sdk:DataGrid>
+
+            <sdk:DataPager x:Name="pgrServicoMedico" PageSize="5" Margin="0,-1,0,0"
+                           Source="{Binding Data, ElementName=servicoMedicoSetDomainDataSource}" />
+
+            <Button x:Name="btnRegistrar" Content="Registrar Novo Serviço" Height="23" Margin="0,12,0,0"
+                    Click="btnRegistrar_Click" HorizontalAlignment="Right" Width="150" />
+
+            <dataForm:DataForm x:Name="dfrServico" Header="Informações do Serviço Médico" Margin="0,20,0,0"
+                               AutoGenerateFields="False" AutoCommit="False" AutoEdit="False" 
+                               CurrentItem="{Binding SelectedItem, ElementName=servicoMedicoSetDataGrid}"
+                               EditEnding="dfrServico_EditEnding" VerticalAlignment="Top">
+                <dataForm:DataForm.EditTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <dataForm:DataField Label="Código">
+                                <TextBox Text="{Binding codigo, Mode=OneWay}" />
+                            </dataForm:DataField>
+                            <dataForm:DataField Label="Nome">
+                                <TextBox Text="{Binding nome, Mode=TwoWay}" />
+                            </dataForm:DataField>
+                            <dataForm:DataField Label="Descrição">
+                                <TextBox Text="{Binding descricao, Mode=TwoWay}" />
+                            </dataForm:DataField>
+                            <dataForm:DataField Label="Preço">
+                                <TextBox Text="{Binding preco, Mode=TwoWay}" />
+                            </dataForm:DataField>
+                        </StackPanel>
+                    </DataTemplate>
+                </dataForm:DataForm.EditTemplate>
+            </dataForm:DataForm>
+
+            <Button x:Name="btnDeletar" Content="Deletar Serviço"
+                    Width="120" Height="23" HorizontalAlignment="Right" Margin="0,10,0,0"
+                    Click="btnDeletar_Click"/>
+            
+        </StackPanel>
+
+    </Grid>
+</navigation:Page>

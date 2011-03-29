@@ -1,0 +1,41 @@
+﻿<navigation:Page x:Class="ERP.QualidadeCliente" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="640" d:DesignHeight="480"
+           Title="QualidadeCliente Page" xmlns:riaControls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.DomainServices" xmlns:my="clr-namespace:ERPQualidadeModel" xmlns:my1="clr-namespace:ERP.Web" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk">
+    <Grid x:Name="LayoutRoot">
+        <riaControls:DomainDataSource AutoLoad="True" d:DesignData="{d:DesignInstance my:SatisfacaoClienteSet, CreateList=true}" Height="0" LoadedData="satisfacaoClienteSetDomainDataSource_LoadedData" Name="satisfacaoClienteSetDomainDataSource" QueryName="GetSatisfacaoClienteSetQuery" Width="0">
+            <riaControls:DomainDataSource.DomainContext>
+                <my1:QualidadeContext />
+            </riaControls:DomainDataSource.DomainContext>
+        </riaControls:DomainDataSource>
+        <sdk:DataGrid AutoGenerateColumns="False" Height="200" HorizontalAlignment="Left" ItemsSource="{Binding ElementName=satisfacaoClienteSetDomainDataSource, Path=Data}" Margin="12,56,0,0" Name="satisfacaoClienteSetDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" VerticalAlignment="Top" Width="400" DataContext="{Binding ElementName=satisfacaoClienteSetDomainDataSource}">
+            <sdk:DataGrid.Columns>
+                <sdk:DataGridTextColumn x:Name="comentariosColumn" Binding="{Binding Path=comentarios}" Header="Comentarios" Width="SizeToHeader" />
+                <sdk:DataGridTemplateColumn x:Name="data_avaliacaoColumn" Header="Data avaliacao" Width="SizeToHeader">
+                    <sdk:DataGridTemplateColumn.CellEditingTemplate>
+                        <DataTemplate>
+                            <sdk:DatePicker SelectedDate="{Binding Path=data_avaliacao, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellEditingTemplate>
+                    <sdk:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=data_avaliacao, StringFormat=\{0:d\}}" />
+                        </DataTemplate>
+                    </sdk:DataGridTemplateColumn.CellTemplate>
+                </sdk:DataGridTemplateColumn>
+                <sdk:DataGridTextColumn x:Name="idColumn" Binding="{Binding Path=id, Mode=OneWay}" Header="Id" IsReadOnly="True" Width="SizeToHeader" />
+                <sdk:DataGridTextColumn x:Name="nomeColumn" Binding="{Binding Path=nome}" Header="Nome" Width="SizeToHeader" />
+                <sdk:DataGridTextColumn x:Name="nota_finalColumn" Binding="{Binding Path=nota_final}" Header="Nota final" Width="SizeToHeader" />
+                <sdk:DataGridCheckBoxColumn x:Name="outra_opiniaoColumn" Binding="{Binding Path=outra_opiniao}" Header="Outra opiniao" Width="SizeToHeader" />
+                <sdk:DataGridTextColumn x:Name="qualidade_atendimentoColumn" Binding="{Binding Path=qualidade_atendimento}" Header="Qualidade atendimento" Width="SizeToHeader" />
+                <sdk:DataGridTextColumn x:Name="tempo_esperaColumn" Binding="{Binding Path=tempo_espera}" Header="Tempo espera" Width="SizeToHeader" />
+            </sdk:DataGrid.Columns>
+        </sdk:DataGrid>
+        <sdk:Label Content="CRUD de Satisfação de Cliente" FontSize="25" FontWeight="Bold" Height="40" HorizontalAlignment="Left" Margin="10,10,0,0" Name="label1" VerticalAlignment="Top" Width="500" />
+    </Grid>
+</navigation:Page>

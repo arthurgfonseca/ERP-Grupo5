@@ -1,2 +1,0 @@
-C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERP\Generated_Code\ERP.Web.g.cs
-C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERP\Generated_Code\Models\Shared\User.shared.cs

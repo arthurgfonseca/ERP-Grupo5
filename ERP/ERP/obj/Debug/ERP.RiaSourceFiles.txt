@@ -1,0 +1,3 @@
+C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP.Web\ERP.Web.csproj,634370967593589824,Services\AdministracaoService.cs,GlobalSuppressions.cs,Resources\ValidationErrorResources.Designer.cs,Resources\RegistrationDataResources.Designer.cs,Services\AuthenticationService.cs,Properties\AssemblyInfo.cs,Models\User.cs,Models\RegistrationData.cs,Services\QualidadeService.cs,Services\UserRegistrationService.cs,Models\Shared\User.shared.cs,
+C:\Users\5946108\Desktop\ERP2010033012\ERP\ErpAdministracaoModel\ErpAdministracaoModel.csproj,634340785720000000,AdministracaoModel.Designer.cs,Properties\AssemblyInfo.cs,
+C:\Users\5946108\Desktop\ERP2010033012\ERP\ERPQualidadeModel\ERPQualidadeModel.csproj,634368687520000000,Properties\AssemblyInfo.cs,QualidadeModel.Designer.cs,

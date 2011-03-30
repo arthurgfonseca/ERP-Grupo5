@@ -1,0 +1,39 @@
+C:\Projects\danilo.yokoyama\ERP\ERP.Web\bin\ERP.Web.dll
+C:\Projects\danilo.yokoyama\ERP\ERP.Web\bin\ERP.Web.pdb
+C:\Projects\danilo.yokoyama\ERP\ERP.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\danilo.yokoyama\ERP\ERP.Web\obj\Debug\ERP.Web.Resources.ValidationErrorResources.resources
+C:\Projects\danilo.yokoyama\ERP\ERP.Web\obj\Debug\ERP.Web.Resources.RegistrationDataResources.resources
+C:\Projects\danilo.yokoyama\ERP\ERP.Web\obj\Debug\GenerateResource.read.1.tlog
+C:\Projects\danilo.yokoyama\ERP\ERP.Web\obj\Debug\GenerateResource.write.1.tlog
+C:\Projects\danilo.yokoyama\ERP\ERP.Web\obj\Debug\ERP.Web.dll
+C:\Projects\danilo.yokoyama\ERP\ERP.Web\obj\Debug\ERP.Web.pdb
+C:\Projects\danilo.yokoyama\ERP\ERP.Web\bin\ErpAdministracaoModel.dll
+C:\Projects\danilo.yokoyama\ERP\ERP.Web\bin\ErpAdministracaoModel.pdb
+C:\Projects\danilo.yokoyama\ERP\ERP.Web\bin\ERPQualidadeModel.dll
+C:\Projects\danilo.yokoyama\ERP\ERP.Web\bin\ERPQualidadeModel.pdb
+C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERP.Web\bin\ERP.Web.dll
+C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERP.Web\bin\ERP.Web.pdb
+C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERP.Web\bin\ErpAdministracaoModel.dll
+C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERP.Web\bin\ERPQualidadeModel.dll
+C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERP.Web\bin\ErpAdministracaoModel.pdb
+C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERP.Web\bin\ERPQualidadeModel.pdb
+C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERP.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERP.Web\obj\Debug\ERP.Web.Resources.ValidationErrorResources.resources
+C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERP.Web\obj\Debug\ERP.Web.Resources.RegistrationDataResources.resources
+C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERP.Web\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERP.Web\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERP.Web\obj\Debug\ERP.Web.dll
+C:\Users\Danilo\Documents\Visual Studio 2010\Projects\PCS2046\ERP\ERP.Web\obj\Debug\ERP.Web.pdb
+C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP.Web\bin\ERP.Web.dll
+C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP.Web\bin\ERP.Web.pdb
+C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP.Web\bin\ErpAdministracaoModel.dll
+C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP.Web\bin\ERPQualidadeModel.dll
+C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP.Web\bin\ErpAdministracaoModel.pdb
+C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP.Web\bin\ERPQualidadeModel.pdb
+C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP.Web\obj\Debug\ERP.Web.Resources.ValidationErrorResources.resources
+C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP.Web\obj\Debug\ERP.Web.Resources.RegistrationDataResources.resources
+C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP.Web\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP.Web\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP.Web\obj\Debug\ERP.Web.dll
+C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP.Web\obj\Debug\ERP.Web.pdb

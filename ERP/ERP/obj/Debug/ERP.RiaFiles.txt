@@ -1,0 +1,2 @@
+C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP\Generated_Code\ERP.Web.g.cs
+C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP\Generated_Code\Models\Shared\User.shared.cs

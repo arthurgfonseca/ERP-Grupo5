@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="erp_qualidadeModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="erp_qualidadeModelStoreContainer">
+    <EntitySet Name="SatisfacaoClienteSet" EntityType="erp_qualidadeModel.Store.SatisfacaoClienteSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SatisfacaoFuncionarioSet" EntityType="erp_qualidadeModel.Store.SatisfacaoFuncionarioSet" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="SatisfacaoClienteSet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="data_avaliacao" Type="datetime" Nullable="false" />
+    <Property Name="tempo_espera" Type="decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="qualidade_atendimento" Type="decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="outra_opiniao" Type="bit" Nullable="false" />
+    <Property Name="nota_final" Type="decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="comentarios" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SatisfacaoFuncionarioSet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome_funcionario" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="codigo_funcionario" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="data_avaliacao" Type="datetime" Nullable="false" />
+    <Property Name="nota_ambiente_trabalho" Type="decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="nota_colegas_trabalho" Type="decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="nota_satisfacao_pessoal" Type="decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="nota_final" Type="decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="comentarios" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+</Schema>

@@ -37,3 +37,16 @@ C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP.Web\obj\Debug\GenerateResource.re
 C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP.Web\obj\Debug\GenerateResource.write.1.tlog
 C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP.Web\obj\Debug\ERP.Web.dll
 C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP.Web\obj\Debug\ERP.Web.pdb
+C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ERP.Web\bin\ERP.Web.dll
+C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ERP.Web\bin\ERP.Web.pdb
+C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ERP.Web\bin\ErpAdministracaoModel.dll
+C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ERP.Web\bin\ERPQualidadeModel.dll
+C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ERP.Web\bin\ErpAdministracaoModel.pdb
+C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ERP.Web\bin\ERPQualidadeModel.pdb
+C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ERP.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ERP.Web\obj\Debug\ERP.Web.Resources.ValidationErrorResources.resources
+C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ERP.Web\obj\Debug\ERP.Web.Resources.RegistrationDataResources.resources
+C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ERP.Web\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ERP.Web\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ERP.Web\obj\Debug\ERP.Web.dll
+C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ERP.Web\obj\Debug\ERP.Web.pdb

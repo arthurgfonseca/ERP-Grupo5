@@ -2020,19 +2020,19 @@ namespace ERPQualidadeModel
         
         private string _comentarios;
         
-        private DateTime _data_avaliacao;
+        private Nullable<DateTime> _data_avaliacao;
         
         private int _id;
         
         private string _nome;
         
-        private decimal _nota_final;
+        private Nullable<decimal> _nota_final;
         
-        private bool _outra_opiniao;
+        private Nullable<bool> _outra_opiniao;
         
-        private decimal _qualidade_atendimento;
+        private Nullable<decimal> _qualidade_atendimento;
         
-        private decimal _tempo_espera;
+        private Nullable<decimal> _tempo_espera;
         
         #region Extensibility Method Definitions
 
@@ -2043,19 +2043,19 @@ namespace ERPQualidadeModel
         partial void OnCreated();
         partial void OncomentariosChanging(string value);
         partial void OncomentariosChanged();
-        partial void Ondata_avaliacaoChanging(DateTime value);
+        partial void Ondata_avaliacaoChanging(Nullable<DateTime> value);
         partial void Ondata_avaliacaoChanged();
         partial void OnidChanging(int value);
         partial void OnidChanged();
         partial void OnnomeChanging(string value);
         partial void OnnomeChanged();
-        partial void Onnota_finalChanging(decimal value);
+        partial void Onnota_finalChanging(Nullable<decimal> value);
         partial void Onnota_finalChanged();
-        partial void Onoutra_opiniaoChanging(bool value);
+        partial void Onoutra_opiniaoChanging(Nullable<bool> value);
         partial void Onoutra_opiniaoChanged();
-        partial void Onqualidade_atendimentoChanging(decimal value);
+        partial void Onqualidade_atendimentoChanging(Nullable<decimal> value);
         partial void Onqualidade_atendimentoChanged();
-        partial void Ontempo_esperaChanging(decimal value);
+        partial void Ontempo_esperaChanging(Nullable<decimal> value);
         partial void Ontempo_esperaChanged();
 
         #endregion
@@ -2073,7 +2073,6 @@ namespace ERPQualidadeModel
         /// Gets or sets the 'comentarios' value.
         /// </summary>
         [DataMember()]
-        [Required()]
         public string comentarios
         {
             get
@@ -2098,7 +2097,7 @@ namespace ERPQualidadeModel
         /// Gets or sets the 'data_avaliacao' value.
         /// </summary>
         [DataMember()]
-        public DateTime data_avaliacao
+        public Nullable<DateTime> data_avaliacao
         {
             get
             {
@@ -2148,7 +2147,6 @@ namespace ERPQualidadeModel
         /// Gets or sets the 'nome' value.
         /// </summary>
         [DataMember()]
-        [Required()]
         public string nome
         {
             get
@@ -2173,7 +2171,7 @@ namespace ERPQualidadeModel
         /// Gets or sets the 'nota_final' value.
         /// </summary>
         [DataMember()]
-        public decimal nota_final
+        public Nullable<decimal> nota_final
         {
             get
             {
@@ -2197,7 +2195,7 @@ namespace ERPQualidadeModel
         /// Gets or sets the 'outra_opiniao' value.
         /// </summary>
         [DataMember()]
-        public bool outra_opiniao
+        public Nullable<bool> outra_opiniao
         {
             get
             {
@@ -2221,7 +2219,7 @@ namespace ERPQualidadeModel
         /// Gets or sets the 'qualidade_atendimento' value.
         /// </summary>
         [DataMember()]
-        public decimal qualidade_atendimento
+        public Nullable<decimal> qualidade_atendimento
         {
             get
             {
@@ -2245,7 +2243,7 @@ namespace ERPQualidadeModel
         /// Gets or sets the 'tempo_espera' value.
         /// </summary>
         [DataMember()]
-        public decimal tempo_espera
+        public Nullable<decimal> tempo_espera
         {
             get
             {
@@ -2286,19 +2284,19 @@ namespace ERPQualidadeModel
         
         private string _comentarios;
         
-        private DateTime _data_avaliacao;
+        private Nullable<DateTime> _data_avaliacao;
         
         private int _id;
         
         private string _nome_funcionario;
         
-        private decimal _nota_ambiente_trabalho;
+        private Nullable<decimal> _nota_ambiente_trabalho;
         
-        private decimal _nota_colegas_trabalho;
+        private Nullable<decimal> _nota_colegas_trabalho;
         
-        private decimal _nota_final;
+        private Nullable<decimal> _nota_final;
         
-        private decimal _nota_satisfacao_pessoal;
+        private Nullable<decimal> _nota_satisfacao_pessoal;
         
         #region Extensibility Method Definitions
 
@@ -2311,19 +2309,19 @@ namespace ERPQualidadeModel
         partial void Oncodigo_funcionarioChanged();
         partial void OncomentariosChanging(string value);
         partial void OncomentariosChanged();
-        partial void Ondata_avaliacaoChanging(DateTime value);
+        partial void Ondata_avaliacaoChanging(Nullable<DateTime> value);
         partial void Ondata_avaliacaoChanged();
         partial void OnidChanging(int value);
         partial void OnidChanged();
         partial void Onnome_funcionarioChanging(string value);
         partial void Onnome_funcionarioChanged();
-        partial void Onnota_ambiente_trabalhoChanging(decimal value);
+        partial void Onnota_ambiente_trabalhoChanging(Nullable<decimal> value);
         partial void Onnota_ambiente_trabalhoChanged();
-        partial void Onnota_colegas_trabalhoChanging(decimal value);
+        partial void Onnota_colegas_trabalhoChanging(Nullable<decimal> value);
         partial void Onnota_colegas_trabalhoChanged();
-        partial void Onnota_finalChanging(decimal value);
+        partial void Onnota_finalChanging(Nullable<decimal> value);
         partial void Onnota_finalChanged();
-        partial void Onnota_satisfacao_pessoalChanging(decimal value);
+        partial void Onnota_satisfacao_pessoalChanging(Nullable<decimal> value);
         partial void Onnota_satisfacao_pessoalChanged();
 
         #endregion
@@ -2341,7 +2339,6 @@ namespace ERPQualidadeModel
         /// Gets or sets the 'codigo_funcionario' value.
         /// </summary>
         [DataMember()]
-        [Required()]
         public string codigo_funcionario
         {
             get
@@ -2366,7 +2363,6 @@ namespace ERPQualidadeModel
         /// Gets or sets the 'comentarios' value.
         /// </summary>
         [DataMember()]
-        [Required()]
         public string comentarios
         {
             get
@@ -2391,7 +2387,7 @@ namespace ERPQualidadeModel
         /// Gets or sets the 'data_avaliacao' value.
         /// </summary>
         [DataMember()]
-        public DateTime data_avaliacao
+        public Nullable<DateTime> data_avaliacao
         {
             get
             {
@@ -2441,7 +2437,6 @@ namespace ERPQualidadeModel
         /// Gets or sets the 'nome_funcionario' value.
         /// </summary>
         [DataMember()]
-        [Required()]
         public string nome_funcionario
         {
             get
@@ -2466,7 +2461,7 @@ namespace ERPQualidadeModel
         /// Gets or sets the 'nota_ambiente_trabalho' value.
         /// </summary>
         [DataMember()]
-        public decimal nota_ambiente_trabalho
+        public Nullable<decimal> nota_ambiente_trabalho
         {
             get
             {
@@ -2490,7 +2485,7 @@ namespace ERPQualidadeModel
         /// Gets or sets the 'nota_colegas_trabalho' value.
         /// </summary>
         [DataMember()]
-        public decimal nota_colegas_trabalho
+        public Nullable<decimal> nota_colegas_trabalho
         {
             get
             {
@@ -2514,7 +2509,7 @@ namespace ERPQualidadeModel
         /// Gets or sets the 'nota_final' value.
         /// </summary>
         [DataMember()]
-        public decimal nota_final
+        public Nullable<decimal> nota_final
         {
             get
             {
@@ -2538,7 +2533,7 @@ namespace ERPQualidadeModel
         /// Gets or sets the 'nota_satisfacao_pessoal' value.
         /// </summary>
         [DataMember()]
-        public decimal nota_satisfacao_pessoal
+        public Nullable<decimal> nota_satisfacao_pessoal
         {
             get
             {

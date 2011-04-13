@@ -16,3 +16,9 @@ C:\Users\5946108\Desktop\ERP2010033012\ERP\ErpAdministracaoModel\bin\Debug\ErpAd
 C:\Users\5946108\Desktop\ERP2010033012\ERP\ErpAdministracaoModel\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\5946108\Desktop\ERP2010033012\ERP\ErpAdministracaoModel\obj\Debug\ErpAdministracaoModel.dll
 C:\Users\5946108\Desktop\ERP2010033012\ERP\ErpAdministracaoModel\obj\Debug\ErpAdministracaoModel.pdb
+C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ErpAdministracaoModel\bin\Debug\ErpAdministracaoModel.dll.config
+C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ErpAdministracaoModel\bin\Debug\ErpAdministracaoModel.dll
+C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ErpAdministracaoModel\bin\Debug\ErpAdministracaoModel.pdb
+C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ErpAdministracaoModel\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ErpAdministracaoModel\obj\Debug\ErpAdministracaoModel.dll
+C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ErpAdministracaoModel\obj\Debug\ErpAdministracaoModel.pdb

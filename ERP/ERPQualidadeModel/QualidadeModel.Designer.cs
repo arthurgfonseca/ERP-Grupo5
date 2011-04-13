@@ -138,24 +138,10 @@ namespace ERPQualidadeModel
         /// Create a new SatisfacaoClienteSet object.
         /// </summary>
         /// <param name="id">Initial value of the id property.</param>
-        /// <param name="nome">Initial value of the nome property.</param>
-        /// <param name="data_avaliacao">Initial value of the data_avaliacao property.</param>
-        /// <param name="tempo_espera">Initial value of the tempo_espera property.</param>
-        /// <param name="qualidade_atendimento">Initial value of the qualidade_atendimento property.</param>
-        /// <param name="outra_opiniao">Initial value of the outra_opiniao property.</param>
-        /// <param name="nota_final">Initial value of the nota_final property.</param>
-        /// <param name="comentarios">Initial value of the comentarios property.</param>
-        public static SatisfacaoClienteSet CreateSatisfacaoClienteSet(global::System.Int32 id, global::System.String nome, global::System.DateTime data_avaliacao, global::System.Decimal tempo_espera, global::System.Decimal qualidade_atendimento, global::System.Boolean outra_opiniao, global::System.Decimal nota_final, global::System.String comentarios)
+        public static SatisfacaoClienteSet CreateSatisfacaoClienteSet(global::System.Int32 id)
         {
             SatisfacaoClienteSet satisfacaoClienteSet = new SatisfacaoClienteSet();
             satisfacaoClienteSet.id = id;
-            satisfacaoClienteSet.nome = nome;
-            satisfacaoClienteSet.data_avaliacao = data_avaliacao;
-            satisfacaoClienteSet.tempo_espera = tempo_espera;
-            satisfacaoClienteSet.qualidade_atendimento = qualidade_atendimento;
-            satisfacaoClienteSet.outra_opiniao = outra_opiniao;
-            satisfacaoClienteSet.nota_final = nota_final;
-            satisfacaoClienteSet.comentarios = comentarios;
             return satisfacaoClienteSet;
         }
 
@@ -192,7 +178,7 @@ namespace ERPQualidadeModel
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String nome
         {
@@ -204,7 +190,7 @@ namespace ERPQualidadeModel
             {
                 OnnomeChanging(value);
                 ReportPropertyChanging("nome");
-                _nome = StructuralObject.SetValidValue(value, false);
+                _nome = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("nome");
                 OnnomeChanged();
             }
@@ -216,9 +202,9 @@ namespace ERPQualidadeModel
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.DateTime data_avaliacao
+        public Nullable<global::System.DateTime> data_avaliacao
         {
             get
             {
@@ -233,16 +219,16 @@ namespace ERPQualidadeModel
                 Ondata_avaliacaoChanged();
             }
         }
-        private global::System.DateTime _data_avaliacao;
-        partial void Ondata_avaliacaoChanging(global::System.DateTime value);
+        private Nullable<global::System.DateTime> _data_avaliacao;
+        partial void Ondata_avaliacaoChanging(Nullable<global::System.DateTime> value);
         partial void Ondata_avaliacaoChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Decimal tempo_espera
+        public Nullable<global::System.Decimal> tempo_espera
         {
             get
             {
@@ -257,16 +243,16 @@ namespace ERPQualidadeModel
                 Ontempo_esperaChanged();
             }
         }
-        private global::System.Decimal _tempo_espera;
-        partial void Ontempo_esperaChanging(global::System.Decimal value);
+        private Nullable<global::System.Decimal> _tempo_espera;
+        partial void Ontempo_esperaChanging(Nullable<global::System.Decimal> value);
         partial void Ontempo_esperaChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Decimal qualidade_atendimento
+        public Nullable<global::System.Decimal> qualidade_atendimento
         {
             get
             {
@@ -281,16 +267,16 @@ namespace ERPQualidadeModel
                 Onqualidade_atendimentoChanged();
             }
         }
-        private global::System.Decimal _qualidade_atendimento;
-        partial void Onqualidade_atendimentoChanging(global::System.Decimal value);
+        private Nullable<global::System.Decimal> _qualidade_atendimento;
+        partial void Onqualidade_atendimentoChanging(Nullable<global::System.Decimal> value);
         partial void Onqualidade_atendimentoChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Boolean outra_opiniao
+        public Nullable<global::System.Boolean> outra_opiniao
         {
             get
             {
@@ -305,16 +291,16 @@ namespace ERPQualidadeModel
                 Onoutra_opiniaoChanged();
             }
         }
-        private global::System.Boolean _outra_opiniao;
-        partial void Onoutra_opiniaoChanging(global::System.Boolean value);
+        private Nullable<global::System.Boolean> _outra_opiniao;
+        partial void Onoutra_opiniaoChanging(Nullable<global::System.Boolean> value);
         partial void Onoutra_opiniaoChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Decimal nota_final
+        public Nullable<global::System.Decimal> nota_final
         {
             get
             {
@@ -329,14 +315,14 @@ namespace ERPQualidadeModel
                 Onnota_finalChanged();
             }
         }
-        private global::System.Decimal _nota_final;
-        partial void Onnota_finalChanging(global::System.Decimal value);
+        private Nullable<global::System.Decimal> _nota_final;
+        partial void Onnota_finalChanging(Nullable<global::System.Decimal> value);
         partial void Onnota_finalChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String comentarios
         {
@@ -348,7 +334,7 @@ namespace ERPQualidadeModel
             {
                 OncomentariosChanging(value);
                 ReportPropertyChanging("comentarios");
-                _comentarios = StructuralObject.SetValidValue(value, false);
+                _comentarios = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("comentarios");
                 OncomentariosChanged();
             }
@@ -375,26 +361,10 @@ namespace ERPQualidadeModel
         /// Create a new SatisfacaoFuncionarioSet object.
         /// </summary>
         /// <param name="id">Initial value of the id property.</param>
-        /// <param name="nome_funcionario">Initial value of the nome_funcionario property.</param>
-        /// <param name="codigo_funcionario">Initial value of the codigo_funcionario property.</param>
-        /// <param name="data_avaliacao">Initial value of the data_avaliacao property.</param>
-        /// <param name="nota_ambiente_trabalho">Initial value of the nota_ambiente_trabalho property.</param>
-        /// <param name="nota_colegas_trabalho">Initial value of the nota_colegas_trabalho property.</param>
-        /// <param name="nota_satisfacao_pessoal">Initial value of the nota_satisfacao_pessoal property.</param>
-        /// <param name="nota_final">Initial value of the nota_final property.</param>
-        /// <param name="comentarios">Initial value of the comentarios property.</param>
-        public static SatisfacaoFuncionarioSet CreateSatisfacaoFuncionarioSet(global::System.Int32 id, global::System.String nome_funcionario, global::System.String codigo_funcionario, global::System.DateTime data_avaliacao, global::System.Decimal nota_ambiente_trabalho, global::System.Decimal nota_colegas_trabalho, global::System.Decimal nota_satisfacao_pessoal, global::System.Decimal nota_final, global::System.String comentarios)
+        public static SatisfacaoFuncionarioSet CreateSatisfacaoFuncionarioSet(global::System.Int32 id)
         {
             SatisfacaoFuncionarioSet satisfacaoFuncionarioSet = new SatisfacaoFuncionarioSet();
             satisfacaoFuncionarioSet.id = id;
-            satisfacaoFuncionarioSet.nome_funcionario = nome_funcionario;
-            satisfacaoFuncionarioSet.codigo_funcionario = codigo_funcionario;
-            satisfacaoFuncionarioSet.data_avaliacao = data_avaliacao;
-            satisfacaoFuncionarioSet.nota_ambiente_trabalho = nota_ambiente_trabalho;
-            satisfacaoFuncionarioSet.nota_colegas_trabalho = nota_colegas_trabalho;
-            satisfacaoFuncionarioSet.nota_satisfacao_pessoal = nota_satisfacao_pessoal;
-            satisfacaoFuncionarioSet.nota_final = nota_final;
-            satisfacaoFuncionarioSet.comentarios = comentarios;
             return satisfacaoFuncionarioSet;
         }
 
@@ -431,7 +401,7 @@ namespace ERPQualidadeModel
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String nome_funcionario
         {
@@ -443,7 +413,7 @@ namespace ERPQualidadeModel
             {
                 Onnome_funcionarioChanging(value);
                 ReportPropertyChanging("nome_funcionario");
-                _nome_funcionario = StructuralObject.SetValidValue(value, false);
+                _nome_funcionario = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("nome_funcionario");
                 Onnome_funcionarioChanged();
             }
@@ -455,7 +425,7 @@ namespace ERPQualidadeModel
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String codigo_funcionario
         {
@@ -467,7 +437,7 @@ namespace ERPQualidadeModel
             {
                 Oncodigo_funcionarioChanging(value);
                 ReportPropertyChanging("codigo_funcionario");
-                _codigo_funcionario = StructuralObject.SetValidValue(value, false);
+                _codigo_funcionario = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("codigo_funcionario");
                 Oncodigo_funcionarioChanged();
             }
@@ -479,9 +449,9 @@ namespace ERPQualidadeModel
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.DateTime data_avaliacao
+        public Nullable<global::System.DateTime> data_avaliacao
         {
             get
             {
@@ -496,16 +466,16 @@ namespace ERPQualidadeModel
                 Ondata_avaliacaoChanged();
             }
         }
-        private global::System.DateTime _data_avaliacao;
-        partial void Ondata_avaliacaoChanging(global::System.DateTime value);
+        private Nullable<global::System.DateTime> _data_avaliacao;
+        partial void Ondata_avaliacaoChanging(Nullable<global::System.DateTime> value);
         partial void Ondata_avaliacaoChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Decimal nota_ambiente_trabalho
+        public Nullable<global::System.Decimal> nota_ambiente_trabalho
         {
             get
             {
@@ -520,16 +490,16 @@ namespace ERPQualidadeModel
                 Onnota_ambiente_trabalhoChanged();
             }
         }
-        private global::System.Decimal _nota_ambiente_trabalho;
-        partial void Onnota_ambiente_trabalhoChanging(global::System.Decimal value);
+        private Nullable<global::System.Decimal> _nota_ambiente_trabalho;
+        partial void Onnota_ambiente_trabalhoChanging(Nullable<global::System.Decimal> value);
         partial void Onnota_ambiente_trabalhoChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Decimal nota_colegas_trabalho
+        public Nullable<global::System.Decimal> nota_colegas_trabalho
         {
             get
             {
@@ -544,16 +514,16 @@ namespace ERPQualidadeModel
                 Onnota_colegas_trabalhoChanged();
             }
         }
-        private global::System.Decimal _nota_colegas_trabalho;
-        partial void Onnota_colegas_trabalhoChanging(global::System.Decimal value);
+        private Nullable<global::System.Decimal> _nota_colegas_trabalho;
+        partial void Onnota_colegas_trabalhoChanging(Nullable<global::System.Decimal> value);
         partial void Onnota_colegas_trabalhoChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Decimal nota_satisfacao_pessoal
+        public Nullable<global::System.Decimal> nota_satisfacao_pessoal
         {
             get
             {
@@ -568,16 +538,16 @@ namespace ERPQualidadeModel
                 Onnota_satisfacao_pessoalChanged();
             }
         }
-        private global::System.Decimal _nota_satisfacao_pessoal;
-        partial void Onnota_satisfacao_pessoalChanging(global::System.Decimal value);
+        private Nullable<global::System.Decimal> _nota_satisfacao_pessoal;
+        partial void Onnota_satisfacao_pessoalChanging(Nullable<global::System.Decimal> value);
         partial void Onnota_satisfacao_pessoalChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.Decimal nota_final
+        public Nullable<global::System.Decimal> nota_final
         {
             get
             {
@@ -592,14 +562,14 @@ namespace ERPQualidadeModel
                 Onnota_finalChanged();
             }
         }
-        private global::System.Decimal _nota_final;
-        partial void Onnota_finalChanging(global::System.Decimal value);
+        private Nullable<global::System.Decimal> _nota_final;
+        partial void Onnota_finalChanging(Nullable<global::System.Decimal> value);
         partial void Onnota_finalChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String comentarios
         {
@@ -611,7 +581,7 @@ namespace ERPQualidadeModel
             {
                 OncomentariosChanging(value);
                 ReportPropertyChanging("comentarios");
-                _comentarios = StructuralObject.SetValidValue(value, false);
+                _comentarios = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("comentarios");
                 OncomentariosChanged();
             }

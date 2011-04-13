@@ -14,27 +14,27 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="nome" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="data_avaliacao" Type="datetime" Nullable="false" />
-    <Property Name="tempo_espera" Type="decimal" Nullable="false" Precision="18" Scale="0" />
-    <Property Name="qualidade_atendimento" Type="decimal" Nullable="false" Precision="18" Scale="0" />
-    <Property Name="outra_opiniao" Type="bit" Nullable="false" />
-    <Property Name="nota_final" Type="decimal" Nullable="false" Precision="18" Scale="0" />
-    <Property Name="comentarios" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="nome" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="data_avaliacao" Type="datetime" Nullable="true" />
+    <Property Name="tempo_espera" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="qualidade_atendimento" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="outra_opiniao" Type="bit" Nullable="true" />
+    <Property Name="nota_final" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="comentarios" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
   <EntityType Name="SatisfacaoFuncionarioSet">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="nome_funcionario" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="codigo_funcionario" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="data_avaliacao" Type="datetime" Nullable="false" />
-    <Property Name="nota_ambiente_trabalho" Type="decimal" Nullable="false" Precision="18" Scale="0" />
-    <Property Name="nota_colegas_trabalho" Type="decimal" Nullable="false" Precision="18" Scale="0" />
-    <Property Name="nota_satisfacao_pessoal" Type="decimal" Nullable="false" Precision="18" Scale="0" />
-    <Property Name="nota_final" Type="decimal" Nullable="false" Precision="18" Scale="0" />
-    <Property Name="comentarios" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="nome_funcionario" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="codigo_funcionario" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="data_avaliacao" Type="datetime" Nullable="true" />
+    <Property Name="nota_ambiente_trabalho" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="nota_colegas_trabalho" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="nota_satisfacao_pessoal" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="nota_final" Type="decimal" Nullable="true" Precision="18" Scale="0" />
+    <Property Name="comentarios" Type="nvarchar(max)" Nullable="true" />
   </EntityType>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -49,27 +49,27 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nome" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="data_avaliacao" Type="DateTime" Nullable="false" />
-          <Property Name="tempo_espera" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-          <Property Name="qualidade_atendimento" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-          <Property Name="outra_opiniao" Type="Boolean" Nullable="false" />
-          <Property Name="nota_final" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-          <Property Name="comentarios" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="nome" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="data_avaliacao" Type="DateTime" Nullable="true" />
+          <Property Name="tempo_espera" Type="Decimal" Nullable="true" Precision="18" Scale="0" />
+          <Property Name="qualidade_atendimento" Type="Decimal" Nullable="true" Precision="18" Scale="0" />
+          <Property Name="outra_opiniao" Type="Boolean" Nullable="true" />
+          <Property Name="nota_final" Type="Decimal" Nullable="true" Precision="18" Scale="0" />
+          <Property Name="comentarios" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
         <EntityType Name="SatisfacaoFuncionarioSet">
           <Key>
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nome_funcionario" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="codigo_funcionario" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="data_avaliacao" Type="DateTime" Nullable="false" />
-          <Property Name="nota_ambiente_trabalho" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-          <Property Name="nota_colegas_trabalho" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-          <Property Name="nota_satisfacao_pessoal" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-          <Property Name="nota_final" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-          <Property Name="comentarios" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="nome_funcionario" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="codigo_funcionario" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="data_avaliacao" Type="DateTime" Nullable="true" />
+          <Property Name="nota_ambiente_trabalho" Type="Decimal" Nullable="true" Precision="18" Scale="0" />
+          <Property Name="nota_colegas_trabalho" Type="Decimal" Nullable="true" Precision="18" Scale="0" />
+          <Property Name="nota_satisfacao_pessoal" Type="Decimal" Nullable="true" Precision="18" Scale="0" />
+          <Property Name="nota_final" Type="Decimal" Nullable="true" Precision="18" Scale="0" />
+          <Property Name="comentarios" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>

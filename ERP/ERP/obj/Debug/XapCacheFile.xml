@@ -1,16 +1,16 @@
-﻿<xapCache source="C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP\Bin\Debug\ERP.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="30/03/2011 17:23:16">
-  <file source="C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP\obj\Debug\ERP.dll" archivePath="ERP.dll" lastWriteTime="30/03/2011 17:23:11" />
-  <file source="C:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.ComponentModel.DataAnnotations.dll" archivePath="System.ComponentModel.DataAnnotations.dll" lastWriteTime="26/08/2010 01:17:48" />
-  <file source="C:\Program Files\Microsoft SDKs\RIA Services\v1.0\Libraries\Silverlight\System.ServiceModel.DomainServices.Client.dll" archivePath="System.ServiceModel.DomainServices.Client.dll" lastWriteTime="06/05/2010 13:24:00" />
-  <file source="C:\Program Files\Microsoft SDKs\RIA Services\v1.0\Libraries\Silverlight\System.ServiceModel.DomainServices.Client.Web.dll" archivePath="System.ServiceModel.DomainServices.Client.Web.dll" lastWriteTime="06/05/2010 13:23:58" />
-  <file source="C:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.ServiceModel.Web.Extensions.dll" archivePath="System.ServiceModel.Web.Extensions.dll" lastWriteTime="26/08/2010 01:17:48" />
-  <file source="C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP\Libs\System.Windows.Controls.Data.DataForm.Toolkit.dll" archivePath="System.Windows.Controls.Data.DataForm.Toolkit.dll" lastWriteTime="23/02/2011 15:20:54" />
-  <file source="C:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Controls.Data.dll" archivePath="System.Windows.Controls.Data.dll" lastWriteTime="26/08/2010 01:17:48" />
-  <file source="C:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Controls.Data.Input.dll" archivePath="System.Windows.Controls.Data.Input.dll" lastWriteTime="26/08/2010 01:17:48" />
-  <file source="C:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Controls.dll" archivePath="System.Windows.Controls.dll" lastWriteTime="26/08/2010 01:17:48" />
-  <file source="C:\Program Files\Microsoft SDKs\RIA Services\v1.0\Libraries\Silverlight\System.Windows.Controls.DomainServices.dll" archivePath="System.Windows.Controls.DomainServices.dll" lastWriteTime="06/05/2010 13:24:00" />
-  <file source="C:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Controls.Input.dll" archivePath="System.Windows.Controls.Input.dll" lastWriteTime="26/08/2010 01:17:48" />
-  <file source="C:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Controls.Navigation.dll" archivePath="System.Windows.Controls.Navigation.dll" lastWriteTime="26/08/2010 01:17:48" />
-  <file source="C:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Data.dll" archivePath="System.Windows.Data.dll" lastWriteTime="26/08/2010 01:17:48" />
-  <file source="C:\Users\5946108\Desktop\ERP2010033012\ERP\ERP\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="30/03/2011 17:23:16" />
+﻿<xapCache source="C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ERP\Bin\Debug\ERP.xap" wasSigned="False" certificateThumbprint="" TimeStampUrl="" lastWriteTime="4/13/2011 5:09:06 PM">
+  <file source="C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ERP\obj\Debug\ERP.dll" archivePath="ERP.dll" lastWriteTime="4/13/2011 5:09:03 PM" />
+  <file source="c:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.ComponentModel.DataAnnotations.dll" archivePath="System.ComponentModel.DataAnnotations.dll" lastWriteTime="8/26/2010 2:17:48 AM" />
+  <file source="c:\Program Files\Microsoft SDKs\RIA Services\v1.0\Libraries\Silverlight\System.ServiceModel.DomainServices.Client.dll" archivePath="System.ServiceModel.DomainServices.Client.dll" lastWriteTime="5/6/2010 2:24:00 PM" />
+  <file source="c:\Program Files\Microsoft SDKs\RIA Services\v1.0\Libraries\Silverlight\System.ServiceModel.DomainServices.Client.Web.dll" archivePath="System.ServiceModel.DomainServices.Client.Web.dll" lastWriteTime="5/6/2010 2:23:58 PM" />
+  <file source="c:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.ServiceModel.Web.Extensions.dll" archivePath="System.ServiceModel.Web.Extensions.dll" lastWriteTime="8/26/2010 2:17:48 AM" />
+  <file source="C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ERP\Libs\System.Windows.Controls.Data.DataForm.Toolkit.dll" archivePath="System.Windows.Controls.Data.DataForm.Toolkit.dll" lastWriteTime="3/30/2011 5:36:16 PM" />
+  <file source="c:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Controls.Data.dll" archivePath="System.Windows.Controls.Data.dll" lastWriteTime="8/26/2010 2:17:48 AM" />
+  <file source="c:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Controls.Data.Input.dll" archivePath="System.Windows.Controls.Data.Input.dll" lastWriteTime="8/26/2010 2:17:48 AM" />
+  <file source="c:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Controls.dll" archivePath="System.Windows.Controls.dll" lastWriteTime="8/26/2010 2:17:48 AM" />
+  <file source="c:\Program Files\Microsoft SDKs\RIA Services\v1.0\Libraries\Silverlight\System.Windows.Controls.DomainServices.dll" archivePath="System.Windows.Controls.DomainServices.dll" lastWriteTime="5/6/2010 2:24:00 PM" />
+  <file source="c:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Controls.Input.dll" archivePath="System.Windows.Controls.Input.dll" lastWriteTime="8/26/2010 2:17:48 AM" />
+  <file source="c:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Controls.Navigation.dll" archivePath="System.Windows.Controls.Navigation.dll" lastWriteTime="8/26/2010 2:17:48 AM" />
+  <file source="c:\Program Files\Microsoft SDKs\Silverlight\v4.0\Libraries\Client\System.Windows.Data.dll" archivePath="System.Windows.Data.dll" lastWriteTime="8/26/2010 2:17:48 AM" />
+  <file source="C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ERP\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="3/30/2011 5:38:42 PM" />
 </xapCache>

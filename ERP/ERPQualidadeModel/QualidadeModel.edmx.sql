@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 03/30/2011 15:32:26
--- Generated from EDMX file: C:\Users\5946108\Desktop\ERP2010033012\ERP\ERPQualidadeModel\QualidadeModel.edmx
+-- Date Created: 04/06/2011 16:31:15
+-- Generated from EDMX file: C:\Users\Arthur Fonseca\ERP\ERP-Grupo5\ERP\ERPQualidadeModel\QualidadeModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -36,27 +36,27 @@ GO
 -- Creating table 'SatisfacaoClienteSet'
 CREATE TABLE [dbo].[SatisfacaoClienteSet] (
     [id] int IDENTITY(1,1) NOT NULL,
-    [nome] nvarchar(max)  NOT NULL,
-    [data_avaliacao] datetime  NOT NULL,
-    [tempo_espera] decimal(18,0)  NOT NULL,
-    [qualidade_atendimento] decimal(18,0)  NOT NULL,
-    [outra_opiniao] bit  NOT NULL,
-    [nota_final] decimal(18,0)  NOT NULL,
-    [comentarios] nvarchar(max)  NOT NULL
+    [nome] nvarchar(max)  NULL,
+    [data_avaliacao] datetime  NULL,
+    [tempo_espera] decimal(18,0)  NULL,
+    [qualidade_atendimento] decimal(18,0)  NULL,
+    [outra_opiniao] bit  NULL,
+    [nota_final] decimal(18,0)  NULL,
+    [comentarios] nvarchar(max)  NULL
 );
 GO
 
 -- Creating table 'SatisfacaoFuncionarioSet'
 CREATE TABLE [dbo].[SatisfacaoFuncionarioSet] (
     [id] int IDENTITY(1,1) NOT NULL,
-    [nome_funcionario] nvarchar(max)  NOT NULL,
-    [codigo_funcionario] nvarchar(max)  NOT NULL,
-    [data_avaliacao] datetime  NOT NULL,
-    [nota_ambiente_trabalho] decimal(18,0)  NOT NULL,
-    [nota_colegas_trabalho] decimal(18,0)  NOT NULL,
-    [nota_satisfacao_pessoal] decimal(18,0)  NOT NULL,
-    [nota_final] decimal(18,0)  NOT NULL,
-    [comentarios] nvarchar(max)  NOT NULL
+    [nome_funcionario] nvarchar(max)  NULL,
+    [codigo_funcionario] nvarchar(max)  NULL,
+    [data_avaliacao] datetime  NULL,
+    [nota_ambiente_trabalho] decimal(18,0)  NULL,
+    [nota_colegas_trabalho] decimal(18,0)  NULL,
+    [nota_satisfacao_pessoal] decimal(18,0)  NULL,
+    [nota_final] decimal(18,0)  NULL,
+    [comentarios] nvarchar(max)  NULL
 );
 GO
 

@@ -123,8 +123,17 @@
     <Compile Include="Views\ConvenioPlanoSaude\RegistroConvenioPlanoSaude.xaml.cs">
       <DependentUpon>RegistroConvenioPlanoSaude.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\QualidadeCliente.xaml.cs">
+    <Compile Include="Views\Qualidade\QualidadeCliente.xaml.cs">
       <DependentUpon>QualidadeCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Qualidade\QualidadeFuncionario.xaml.cs">
+      <DependentUpon>QualidadeFuncionario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Qualidade\RegistroSatisfacaoCliente.xaml.cs">
+      <DependentUpon>RegistroSatisfacaoCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Qualidade\RegistroSatisfacaoFuncionario.xaml.cs">
+      <DependentUpon>RegistroSatisfacaoFuncionario.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ServicoMedico\RegistroServicoMedico.xaml.cs">
       <DependentUpon>RegistroServicoMedico.xaml</DependentUpon>
@@ -199,9 +208,21 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\QualidadeCliente.xaml">
+    <Page Include="Views\Qualidade\QualidadeCliente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Qualidade\QualidadeFuncionario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Qualidade\RegistroSatisfacaoCliente.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Qualidade\RegistroSatisfacaoFuncionario.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\ServicoMedico\RegistroServicoMedico.xaml">
       <SubType>Designer</SubType>

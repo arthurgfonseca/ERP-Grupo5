@@ -1,0 +1,49 @@
+﻿<controls:ChildWindow x:Class="ERP.RegistroSatisfacaoFuncionario"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           xmlns:dataForm="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.DataForm.Toolkit"
+           Width="507" Height="357" 
+           Title="Registro Satisfação Funcionario">
+    <Grid x:Name="LayoutRoot" Margin="2" Width="486">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <StackPanel Height="283" HorizontalAlignment="Left" Name="stackPanel1" VerticalAlignment="Top" Width="487">
+            <dataForm:DataForm x:Name="dfrSatisfacaoFuncionario" CommandButtonsVisibility="None">
+                <dataForm:DataForm.EditTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <dataForm:DataField Label="Nome Funcionário">
+                                <TextBox Text="{Binding nome_funcionario, Mode=TwoWay}" />
+                            </dataForm:DataField>
+                            <dataForm:DataField Label="Data Avaliação">
+                                <TextBox Text="{Binding data_avalicao, Mode=TwoWay}" />
+                            </dataForm:DataField>
+                            <dataForm:DataField Label="Nota Ambiente de Trabalho">
+                                <TextBox Text="{Binding nota_ambiente_trabalho, Mode=TwoWay}" />
+                            </dataForm:DataField>
+                            <dataForm:DataField Label="Nota Colegas de Trabalho">
+                                <TextBox Text="{Binding nota_colegas_trabalho, Mode=TwoWay}" />
+                            </dataForm:DataField>
+                            <dataForm:DataField Label="Nota Satisfação Pessoal">
+                                <TextBox Text="{Binding nota_satisfacao_pessoa, Mode=TwoWay}" />
+                            </dataForm:DataField>
+                            <dataForm:DataField Label="Nota Final">
+                                <TextBox Text="{Binding nota_final, Mode=TwoWay}" />
+                            </dataForm:DataField>
+                            <dataForm:DataField Label="Comentário">
+                                <TextBox Text="{Binding comentario, Mode=TwoWay}" />
+                            </dataForm:DataField>
+                        </StackPanel>
+                    </DataTemplate>
+                </dataForm:DataForm.EditTemplate>
+            </dataForm:DataForm>
+        </StackPanel>
+        <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+
+    </Grid>
+</controls:ChildWindow>

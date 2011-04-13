@@ -1,0 +1,33 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"
+    xmlns:localprimitives="clr-namespace:System.Windows.Controls.Primitives;assembly=System.Windows.Controls.Data">
+    
+    <!-- ******DATA GRID STYLES****** -->
+    <!-- **************************** -->
+    <!-- Primary Color Brushes -->
+
+    <Style x:Key="DataGridStyle"  TargetType="local:DataGrid">
+        <Setter Property="RowBackground" Value="#FFFFFF" />
+        <Setter Property="AlternatingRowBackground" Value="#EBEBED" />
+        <Setter Property="RowHeight" Value="18" />
+        <Setter Property="GridLinesVisibility" Value="All"/>
+        <Setter Property="HeadersVisibility" Value="Column" />
+        <Setter Property="HorizontalGridLinesBrush" Value="#A0A0A0" />
+        <Setter Property="HorizontalScrollBarVisibility" Value="Auto" />
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="SelectionMode" Value="Single" />
+        <Setter Property="CanUserReorderColumns" Value="False" />
+        <Setter Property="CanUserResizeColumns" Value="False" />
+        <Setter Property="CanUserSortColumns" Value="True" />
+        <Setter Property="AutoGenerateColumns" Value="True" />
+        <Setter Property="RowDetailsVisibilityMode" 
+                    Value="VisibleWhenSelected" />
+    </Style>
+    
+    <Style x:Key="FieldSetStyle" TargetType="Grid">
+        <Setter Property="ShowGridLines" Value="True"/>    
+    </Style>
+
+</ResourceDictionary>

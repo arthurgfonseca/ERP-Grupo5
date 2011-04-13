@@ -4,6 +4,7 @@
     using System.Windows.Controls;
     using System.Windows.Navigation;
     using ERP.LoginUI;
+    using System;
     using ErpAdministracaoModel;
     using System.ServiceModel;
     using ERP.Web;
@@ -19,7 +20,34 @@
         public MainPage()
         {
             InitializeComponent();
-            this.loginContainer.Child = new LoginStatus();
+
+            VerificaAutenticacao();
+
+            var ctx = WebContext.Current;
+
+            ctx.Authentication.LoggedIn += (s, e) => DestravaAutenticacao();
+            ctx.Authentication.LoggedOut += (s, e) => TravaAutenticacao();
+        }
+
+        private void VerificaAutenticacao(bool estaNaHome = false)
+        {
+            var ctx = WebContext.Current;
+
+            if (!(ctx.User.IsAuthenticated))
+                TravaAutenticacao(estaNaHome);
+        }
+
+        private void TravaAutenticacao(bool estaNaHome = false)
+        {
+            LinksStackPanel.Visibility = Visibility.Collapsed;
+            if (!estaNaHome)
+                ContentFrame.Navigate(new Uri("/Home", UriKind.Relative));
+        }
+
+        private void DestravaAutenticacao()
+        {
+            LinksStackPanel.Visibility = Visibility.Visible;
+            ContentFrame.Navigate(new Uri("", UriKind.Relative));
         }
 
         /// <summary>
@@ -29,17 +57,13 @@
         {
             foreach (UIElement child in LinksStackPanel.Children)
             {
-                HyperlinkButton hb = child as HyperlinkButton;
+                var hb = child as HyperlinkButton;
                 if (hb != null && hb.NavigateUri != null)
                 {
-                    if (hb.NavigateUri.ToString().Equals(e.Uri.ToString()))
-                    {
-                        VisualStateManager.GoToState(hb, "ActiveLink", true);
-                    }
-                    else
-                    {
-                        VisualStateManager.GoToState(hb, "InactiveLink", true);
-                    }
+                    VisualStateManager.GoToState(hb,
+                                                 hb.NavigateUri.ToString().Equals(e.Uri.ToString())
+                                                     ? "ActiveLink"
+                                                     : "InactiveLink", true);
                 }
             }
         }
@@ -51,6 +75,12 @@
         {
             e.Handled = true;
             ErrorWindow.CreateNew(e.Exception);
+        }
+
+        private void ContentFrameNavigating(object sender, NavigatingCancelEventArgs e)
+        {
+            var estaNaHome = e.Uri == new Uri("/Home", UriKind.Relative);
+            VerificaAutenticacao(estaNaHome);
         }
 
         private void convenioPlanoSaudeSetDomainDataSource_LoadedData(object sender, System.Windows.Controls.LoadedDataEventArgs e)

@@ -4,7 +4,8 @@
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation" 
   xmlns:uriMapper="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation"
-  xmlns:dataControls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.DataForm.Toolkit" 
+  xmlns:dataControls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.DataForm.Toolkit"
+  xmlns:login="clr-namespace:ERP.LoginUI"
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
   mc:Ignorable="d" d:DesignWidth="1096" d:DesignHeight="480" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" xmlns:riaControls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.DomainServices" xmlns:my="clr-namespace:ERP.Web" xmlns:my1="clr-namespace:ErpAdministracaoModel">
 
@@ -32,7 +33,7 @@
 
                         <ContentControl Style="{StaticResource LogoIcon}"/>
                         <TextBlock x:Name="ApplicationNameTextBlock" Style="{StaticResource ApplicationNameStyle}" 
-                               Text="{Binding ApplicationStrings.ApplicationName, Source={StaticResource ResourceWrapper}}"/>
+                               Text="Administração"/>
 
                     </StackPanel>
                 </Border>
@@ -75,6 +76,7 @@
 
             <Border x:Name="loginContainer" Style="{StaticResource LoginContainerStyle}">
                 <!-- LoginStatus will be added here in code behind. This is required for the designer view to work -->
+                <login:LoginStatus/>
             </Border>
         </Grid>
     </Grid>
